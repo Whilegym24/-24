@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>웨일짐 24 | 안양5동 신규 오픈 사전예약</title>
-<meta name="description" content="웨일짐 24 안양5동, 24시간 운영 신규 오픈. 결제 없이 사전예약만 진행합니다.">
+<title>웨일짐24 헬스&PT | 안양5동 신규 오픈 사전예약</title>
+<meta name="description" content="웨일짐24 헬스&PT 안양5동, 24시간 운영 신규 오픈. 결제 없이 사전예약만 진행합니다.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin
@@ -61,6 +61,12 @@
   .tag{font-size:12px;background:rgba(255,255,255,0.08);border:1px solid var(--line);padding:6px 11px;border-radius:8px;color:var(--ivory);}
   .whale-scene{position:relative;height:190px;margin-top:10px;}
   .wave-divider{display:block;width:100%;height:60px;margin-top:20px;}
+  .dday{
+    display:inline-flex;align-items:center;gap:6px;margin:14px 0 22px;
+    background:var(--sun-400);color:var(--navy-900);
+    font-size:15px;font-weight:800;padding:8px 16px;border-radius:999px;
+    letter-spacing:.01em;
+  }
 
   /* ---------- SECTIONS ---------- */
   section{padding:40px 24px;}
@@ -81,6 +87,13 @@
   .card{background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:16px;text-align:center;}
   .card .ic{width:34px;height:34px;margin:0 auto 8px;color:var(--sky-400);}
   .card p{font-size:13px;font-weight:600;margin:0;}
+
+  .benefit-list{display:flex;flex-direction:column;gap:12px;}
+  .benefit-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:14px 16px;}
+  .benefit-ic{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--navy-800);display:flex;align-items:center;justify-content:center;}
+  .benefit-ic svg{width:19px;height:19px;stroke:var(--sun-400);}
+  .benefit-t{font-size:14px;font-weight:700;margin:0 0 3px;}
+  .benefit-d{font-size:12px;color:#5a6b7d;margin:0;line-height:1.5;}
 
   .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .photo{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,var(--ivory-dim),#dfe7ee);display:flex;align-items:center;justify-content:center;color:#9fb0c3;position:relative;overflow:hidden;}
@@ -161,15 +174,18 @@
   <!-- HERO -->
   <div class="hero">
     <span class="eyebrow">신규 오픈</span>
-    <h1>안양5동 24시간<br><span>웨일짐 24</span></h1>
-    <p class="sub">공사기간 12.1~1.15 · 1.20 정식 오픈</p>
+    <h1>안양5동 24시간<br><span>웨일짐24 헬스&PT</span></h1>
+    <p class="sub">공사기간 12.1~1.15 · 1.25 정식 오픈</p>
+    <div class="dday" id="ddayBox">
+      <span id="ddayText">D-DAY 계산 중...</span>
+    </div>
     <div class="tags">
-      <span class="tag">130평 신설 공간</span>
+      <span class="tag">200평대 쾌적한 공간</span>
       <span class="tag">프리미엄 기구 40대</span>
       <span class="tag">지상 24시간 운영</span>
     </div>
     <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
-      <img src="logo.png" alt="웨일짐 24 로고" style="width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.25));">
+      <img src="logo.png" alt="웨일짐24 헬스&PT 로고" style="width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.25));">
     </div>
     <svg class="wave-divider" viewBox="0 0 500 40" preserveAspectRatio="none">
       <path d="M0,20 C125,50 375,-10 500,20 L500,40 L0,40 Z" fill="#F5F7FA"/>
@@ -179,13 +195,13 @@
   <!-- BANNER -->
   <div class="banner" style="margin-top:-4px;">
     <p class="big">예약은 무료, 결제 없이 예약만!</p>
-    <p class="small">사전예약 기간 8.1 ~ 8.31 · 선착순 30명 한정</p>
+    <p class="small">사전예약 기간 11.23 ~ 12.14 · 선착순 30명 한정</p>
   </div>
 
   <!-- 리뉴얼 포인트 -->
   <section>
     <p class="section-label">Opening</p>
-    <h2>웨일짐 24는 이렇게 만들어집니다</h2>
+    <h2>웨일짐24 헬스&PT는 이렇게 만들어집니다</h2>
     <div class="grid2">
       <div class="card">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
@@ -202,6 +218,50 @@
       <div class="card">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         <p>24시간 연중무휴</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 이벤트 혜택 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Benefit</p>
+    <h2>이런 혜택도 있어요</h2>
+    <div class="benefit-list">
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">친구랑 동반등록 시 +1개월 추가</p>
+          <p class="benefit-d">같이 등록하면 둘 다 회원권 기간이 한 달 더 늘어나요</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">헬린이 놀이터 QR 운동영상</p>
+          <p class="benefit-d">기구마다 QR코드 부착, 찍으면 바로 사용법 영상이 나와요</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">위클리 루틴 제공</p>
+          <p class="benefit-d">매주 새로운 운동 루틴을 짜서 안내해드려요</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">회원권 등록 시 PT 2회 제공</p>
+          <p class="benefit-d">헬스 회원권만 등록하셔도 PT 2회를 무료로 받아보실 수 있어요</p>
+        </div>
       </div>
     </div>
   </section>
@@ -255,14 +315,13 @@
       <div class="price-card primary">
         <div class="price-head"><p>1차 등록</p><span class="price-badge">선착순 30명</span></div>
         <p class="period">1.5 ~ 1.20</p>
-        <div class="price-row"><span>6개월</span><span>21만원</span></div>
         <div class="price-row"><span>12개월</span><span>30만원</span></div>
       </div>
       <div class="price-card secondary">
         <div class="price-head"><p>2차 등록</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
         <p class="period">1.21 ~ 2.5</p>
-        <div class="price-row"><span>6개월</span><span>23만원</span></div>
-        <div class="price-row"><span>12개월</span><span>34만원</span></div>
+        <div class="price-row"><span>12개월</span><span>33만원</span></div>
+        <div class="price-row"><span>6개월</span><span>24만원</span></div>
       </div>
     </div>
     <div class="pt-card">
@@ -320,7 +379,7 @@
         </div>
       </div>
       <div class="field">
-        <label for="referral">웨일짐 24를 어디서 알게 되셨나요?</label>
+        <label for="referral">웨일짐24 헬스&PT를 어디서 알게 되셨나요?</label>
         <select id="referral">
           <option>인스타그램</option>
           <option>당근마켓</option>
@@ -339,7 +398,7 @@
     </div>
   </section>
 
-  <footer>웨일짐 24 · 경기도 안양시 만안구 안양동</footer>
+  <footer>웨일짐24 헬스&PT · 경기도 안양시 만안구 안양동</footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -349,6 +408,16 @@
   const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 </script>
 <script>
+  // D-DAY 계산 (오픈일: 2027-01-25)
+  (function(){
+    var openDate = new Date('2027-01-25T00:00:00+09:00');
+    var today = new Date();
+    var diff = Math.ceil((openDate - today) / (1000 * 60 * 60 * 24));
+    var text = diff > 0 ? ('오픈까지 D-' + diff) : (diff === 0 ? '오늘 그랜드 오픈!' : '그랜드 오픈');
+    document.getElementById('ddayText').textContent = text;
+  })();
+
+  // 연락처 입력 시 자동 하이픈
   document.getElementById('phone').addEventListener('input', function(e){
     var digits = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
     var formatted = digits;
@@ -359,6 +428,7 @@
     }
     e.target.value = formatted;
   });
+
   // 선택형 버튼 토글 (성별 / 시간대 / 상담종목)
   document.querySelectorAll('.choice-grid').forEach(function(group){
     var multi = group.dataset.multi === 'true';
