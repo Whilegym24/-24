@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>웨일짐 24 | 안양5동 신규 오픈 사전예약</title>
+<meta name="description" content="웨일짐 24 안양5동, 24시간 운영 신규 오픈. 결제 없이 사전예약만 진행합니다.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<style>
+  :root{
+    --navy-900:#081826;
+    --navy-800:#0C2340;
+    --navy-700:#123058;
+    --sky-400:#4FB3E8;
+    --sky-300:#8ED2F2;
+    --sun-400:#FFC93C;
+    --sun-300:#FFDD85;
+    --ivory:#F5F7FA;
+    --ivory-dim:#E8EEF4;
+    --ink:#0C2340;
+    --line: rgba(255,255,255,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+    background:var(--ivory);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:520px;margin:0 auto;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:radial-gradient(120% 140% at 20% 0%, var(--navy-700) 0%, var(--navy-800) 55%, var(--navy-900) 100%);
+    color:var(--ivory);
+    position:relative;
+    overflow:hidden;
+    padding:52px 24px 0;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12px;font-weight:600;letter-spacing:.04em;
+    color:var(--sun-300);
+    background:rgba(255,201,60,0.12);
+    border:1px solid rgba(255,201,60,0.35);
+    padding:6px 12px;border-radius:999px;
+  }
+  .hero h1{
+    font-size:36px;line-height:1.15;font-weight:800;margin:18px 0 10px;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 span{color:var(--sun-400);}
+  .hero p.sub{font-size:15px;color:var(--sky-300);margin:0 0 22px;font-weight:500;}
+  .hero .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+  .tag{font-size:12px;background:rgba(255,255,255,0.08);border:1px solid var(--line);padding:6px 11px;border-radius:8px;color:var(--ivory);}
+  .whale-scene{position:relative;height:190px;margin-top:10px;}
+  .wave-divider{display:block;width:100%;height:60px;margin-top:20px;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:40px 24px;}
+  .section-label{
+    font-size:12px;font-weight:700;color:var(--sky-400);
+    letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;
+  }
+  h2{font-size:21px;font-weight:800;margin:0 0 18px;letter-spacing:-0.01em;}
+
+  .banner{
+    background:linear-gradient(135deg, var(--sun-400), var(--sun-300));
+    border-radius:16px;padding:18px 20px;text-align:center;margin:0 24px 8px;
+  }
+  .banner p.big{font-size:15px;font-weight:800;color:var(--navy-900);margin:0 0 4px;}
+  .banner p.small{font-size:12px;color:var(--navy-800);margin:0;font-weight:600;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .card{background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:16px;text-align:center;}
+  .card .ic{width:34px;height:34px;margin:0 auto 8px;color:var(--sky-400);}
+  .card p{font-size:13px;font-weight:600;margin:0;}
+
+  .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .photo{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,var(--ivory-dim),#dfe7ee);display:flex;align-items:center;justify-content:center;color:#9fb0c3;position:relative;overflow:hidden;}
+  .photo span{position:absolute;bottom:8px;left:10px;font-size:12px;font-weight:700;color:var(--navy-800);background:rgba(255,255,255,0.85);padding:3px 8px;border-radius:6px;}
+
+  .brand-row{display:flex;gap:8px;}
+  .brand-chip{flex:1;background:var(--navy-800);color:var(--ivory);border-radius:10px;padding:10px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.02em;}
+
+  .check-list{display:flex;flex-direction:column;gap:10px;}
+  .check-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;}
+  .check-item .dot{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:var(--sky-400);display:flex;align-items:center;justify-content:center;}
+  .check-item .dot svg{width:12px;height:12px;stroke:#fff;}
+
+  .trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .trainer{text-align:center;}
+  .trainer .avatar{aspect-ratio:1;border-radius:50%;background:var(--ivory-dim);margin-bottom:8px;display:flex;align-items:center;justify-content:center;color:#9fb0c3;}
+  .trainer p{font-size:11px;color:#5a6b7d;margin:0;font-weight:600;}
+
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .price-card{border-radius:14px;padding:16px;}
+  .price-card.primary{background:linear-gradient(160deg,var(--sun-400),var(--sun-300));}
+  .price-card.secondary{background:#fff;border:1px solid var(--ivory-dim);}
+  .price-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+  .price-head p{font-size:13px;font-weight:800;margin:0;}
+  .price-badge{font-size:10px;font-weight:700;background:rgba(255,255,255,0.6);padding:2px 7px;border-radius:999px;}
+  .price-card .period{font-size:11px;font-weight:600;opacity:.75;margin:0 0 10px;}
+  .price-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;padding:5px 0;border-top:1px dashed rgba(0,0,0,0.1);}
+  .price-row:first-of-type{border-top:none;}
+
+  .pt-card{margin-top:10px;background:var(--navy-800);color:var(--ivory);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
+  .pt-card p.t{font-size:13px;font-weight:800;margin:0 0 2px;}
+  .pt-card p.d{font-size:11px;color:var(--sky-300);margin:0;}
+  .pt-card p.price{font-size:15px;font-weight:800;margin:0;color:var(--sun-400);}
+
+  .map-box{border-radius:14px;background:var(--ivory-dim);height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#5a6b7d;}
+  .map-box p{font-size:12px;font-weight:600;margin:0;}
+
+  /* ---------- FORM ---------- */
+  .form-section{background:var(--navy-800);color:var(--ivory);}
+  .form-section h2{color:#fff;}
+  .form-section .desc{font-size:13px;color:var(--sky-300);margin:0 0 22px;font-weight:500;}
+  .field{margin-bottom:16px;}
+  label{display:block;font-size:12px;font-weight:700;color:var(--sky-300);margin-bottom:6px;letter-spacing:.02em;}
+  input[type=text],input[type=tel],select,textarea{
+    width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--line);
+    color:#fff;border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;
+  }
+  input::placeholder{color:rgba(255,255,255,0.35);}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238ED2F2' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;}
+  select option{color:#000;}
+  .choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .choice-grid.four{grid-template-columns:1fr 1fr;}
+  .choice{
+    background:rgba(255,255,255,0.06);border:1px solid var(--line);color:#fff;
+    border-radius:10px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;
+    font-family:inherit;text-align:center;transition:.15s;
+  }
+  .choice.selected{background:var(--sky-400);border-color:var(--sky-400);color:var(--navy-900);}
+  .submit-btn{
+    width:100%;background:var(--sun-400);color:var(--navy-900);border:none;
+    border-radius:12px;padding:15px;font-size:15px;font-weight:800;cursor:pointer;
+    font-family:inherit;margin-top:6px;
+  }
+  .submit-btn:active{transform:scale(0.99);}
+  .note{font-size:11px;color:rgba(255,255,255,0.45);text-align:center;margin-top:12px;line-height:1.6;}
+
+  .result-msg{display:none;background:rgba(79,179,232,0.12);border:1px solid var(--sky-400);border-radius:12px;padding:16px;text-align:center;margin-top:16px;}
+  .result-msg.show{display:block;}
+  .result-msg p{margin:0;font-size:14px;font-weight:700;color:var(--sky-300);}
+
+  footer{padding:22px 24px 40px;text-align:center;color:#9fb0c3;font-size:11px;background:var(--navy-900);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="eyebrow">신규 오픈</span>
+    <h1>안양5동 24시간<br><span>웨일짐 24</span></h1>
+    <p class="sub">공사기간 12.1~1.15 · 1.20 정식 오픈</p>
+    <div class="tags">
+      <span class="tag">130평 신설 공간</span>
+      <span class="tag">프리미엄 기구 40대</span>
+      <span class="tag">지상 24시간 운영</span>
+    </div>
+    <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
+      <img src="logo.png" alt="웨일짐 24 로고" style="width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.25));">
+    </div>
+    <svg class="wave-divider" viewBox="0 0 500 40" preserveAspectRatio="none">
+      <path d="M0,20 C125,50 375,-10 500,20 L500,40 L0,40 Z" fill="#F5F7FA"/>
+    </svg>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner" style="margin-top:-4px;">
+    <p class="big">예약은 무료, 결제 없이 예약만!</p>
+    <p class="small">사전예약 기간 8.1 ~ 8.31 · 선착순 30명 한정</p>
+  </div>
+
+  <!-- 리뉴얼 포인트 -->
+  <section>
+    <p class="section-label">Opening</p>
+    <h2>웨일짐 24는 이렇게 만들어집니다</h2>
+    <div class="grid2">
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        <p>쾌적한 신설 공간</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="12" r="2.5"/><path d="M9 12h6M4 9v6M20 9v6"/></svg>
+        <p>전체 기구 신규 교체</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2M4 12V8a2 2 0 0 1 2-2h2M12 12V4"/></svg>
+        <p>별도 화장실 시공</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p>24시간 연중무휴</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시설 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Facility</p>
+    <h2>시설 둘러보기</h2>
+    <div class="photo-grid">
+      <div class="photo"><span>웨이트존</span></div>
+      <div class="photo"><span>유산소존</span></div>
+      <div class="photo"><span>탈의실</span></div>
+      <div class="photo"><span>샤워실</span></div>
+    </div>
+    <p style="font-size:13px;font-weight:700;margin:24px 0 10px;color:#5a6b7d;">프리미엄 머신 총 40여대</p>
+    <div class="brand-row">
+      <div class="brand-chip">CYBEX</div>
+      <div class="brand-chip">NEWTECH</div>
+      <div class="brand-chip">BOOTY BUILDER</div>
+    </div>
+  </section>
+
+  <!-- 24시간 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Freedom</p>
+    <h2>24시간이라 가능한 것들</h2>
+    <div class="check-list">
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>출근 전 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>퇴근 후 늦은 시간 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>주말, 명절 새벽 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>하루 입장 무제한</div>
+    </div>
+  </section>
+
+  <!-- 트레이너 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Trainer</p>
+    <h2>트레이너 소개</h2>
+    <div class="trainer-grid">
+      <div class="trainer"><div class="avatar"></div><p>체형교정 전문</p></div>
+      <div class="trainer"><div class="avatar"></div><p>다이어트 전문</p></div>
+      <div class="trainer"><div class="avatar"></div><p>근력 증량 전문</p></div>
+    </div>
+  </section>
+
+  <!-- 가격 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Pricing</p>
+    <h2>오픈 등록가 안내</h2>
+    <div class="price-grid">
+      <div class="price-card primary">
+        <div class="price-head"><p>1차 등록</p><span class="price-badge">선착순 30명</span></div>
+        <p class="period">1.5 ~ 1.20</p>
+        <div class="price-row"><span>6개월</span><span>21만원</span></div>
+        <div class="price-row"><span>12개월</span><span>30만원</span></div>
+      </div>
+      <div class="price-card secondary">
+        <div class="price-head"><p>2차 등록</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
+        <p class="period">1.21 ~ 2.5</p>
+        <div class="price-row"><span>6개월</span><span>23만원</span></div>
+        <div class="price-row"><span>12개월</span><span>34만원</span></div>
+      </div>
+    </div>
+    <div class="pt-card">
+      <div><p class="t">1:1 PT</p><p class="d">사전예약 시 회원권 무료 제공</p></div>
+      <p class="price">회당 4.5만원</p>
+    </div>
+  </section>
+
+  <!-- 위치 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Location</p>
+    <h2>오시는 길</h2>
+    <div class="map-box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <p>안양5동 새마을시장 인근, 5층</p>
+    </div>
+  </section>
+
+  <!-- 신청폼 -->
+  <section class="form-section" id="apply">
+    <p class="section-label" style="color:var(--sun-400);">Reservation</p>
+    <h2>사전예약 신청</h2>
+    <p class="desc">결제 없이 예약만 진행됩니다. 신청 후 담당자가 방문 일정을 문자로 안내드려요.</p>
+
+    <form id="reserveForm">
+      <div class="field">
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="성함을 입력해주세요" required>
+      </div>
+      <div class="field">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" placeholder="010-0000-0000" required>
+      </div>
+      <div class="field">
+        <label>성별</label>
+        <div class="choice-grid" data-group="gender">
+          <button type="button" class="choice">남성</button>
+          <button type="button" class="choice">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>희망 상담시간대</label>
+        <div class="choice-grid four" data-group="time">
+          <button type="button" class="choice">10:00~13:00</button>
+          <button type="button" class="choice">13:00~16:00</button>
+          <button type="button" class="choice">16:00~19:00</button>
+          <button type="button" class="choice">19:00~22:00</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>상담종목 (복수선택)</label>
+        <div class="choice-grid" data-group="interest" data-multi="true">
+          <button type="button" class="choice">헬스</button>
+          <button type="button" class="choice">PT</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="referral">웨일짐 24를 어디서 알게 되셨나요?</label>
+        <select id="referral">
+          <option>인스타그램</option>
+          <option>당근마켓</option>
+          <option>네이버</option>
+          <option>전단지 / 현수막</option>
+          <option>지인소개</option>
+          <option>기타</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">사전예약 신청하기</button>
+      <p class="note">TODO: 이 폼은 아직 데이터를 저장하지 않습니다.<br>다음 단계에서 Supabase 연동을 추가하면 실제로 저장됩니다.</p>
+    </form>
+
+    <div class="result-msg" id="resultMsg">
+      <p>✓ 신청 폼 테스트가 완료됐어요! (아직 실제 저장은 안 됩니다)</p>
+    </div>
+  </section>
+
+  <footer>웨일짐 24 · 경기도 안양시 만안구 안양동</footer>
+</div>
+
+<script>
+  // 선택형 버튼 토글 (성별 / 시간대 / 상담종목)
+  document.querySelectorAll('.choice-grid').forEach(function(group){
+    var multi = group.dataset.multi === 'true';
+    group.querySelectorAll('.choice').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(!multi){
+          group.querySelectorAll('.choice').forEach(function(b){ b.classList.remove('selected'); });
+        }
+        btn.classList.toggle('selected');
+      });
+    });
+  });
+
+  // 폼 제출 -------------------------------------------------
+  // TODO(다음 단계): 아래 handleSubmit 안에서 실제로
+  //   await supabase.from('reservations').insert({ name, phone, ... })
+  // 를 호출하도록 바꾸면 Supabase 테이블에 실시간으로 데이터가 쌓입니다.
+  document.getElementById('reserveForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var payload = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      gender: getSelected('gender'),
+      preferred_time: getSelected('time'),
+      interest: getSelected('interest', true),
+      referral_source: document.getElementById('referral').value
+    };
+
+    console.log('예약 신청 데이터 (아직 저장되지 않음):', payload);
+
+    document.getElementById('resultMsg').classList.add('show');
+    document.getElementById('reserveForm').reset();
+    document.querySelectorAll('.choice.selected').forEach(function(b){ b.classList.remove('selected'); });
+  });
+
+  function getSelected(groupName, multi){
+    var group = document.querySelector('.choice-grid[data-group="' + groupName + '"]');
+    var selected = Array.prototype.slice.call(group.querySelectorAll('.choice.selected')).map(function(b){ return b.textContent; });
+    return multi ? selected : (selected[0] || null);
+  }
+</script>
+
+</body>
+</html>
