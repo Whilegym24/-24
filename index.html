@@ -332,17 +332,22 @@
       </div>
 
       <button type="submit" class="submit-btn">사전예약 신청하기</button>
-      <p class="note">TODO: 이 폼은 아직 데이터를 저장하지 않습니다.<br>다음 단계에서 Supabase 연동을 추가하면 실제로 저장됩니다.</p>
     </form>
 
     <div class="result-msg" id="resultMsg">
-      <p>✓ 신청 폼 테스트가 완료됐어요! (아직 실제 저장은 안 됩니다)</p>
+      <p>✓ 신청이 완료됐어요! 담당자가 곧 연락드릴게요.</p>
     </div>
   </section>
 
   <footer>웨일짐 24 · 경기도 안양시 만안구 안양동</footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = 'https://arhljhcixqlohlatgniq.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_-Wx2NvdmLvcSEw1XSxgFUg_yDnS40Nc';
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
 <script>
   // 선택형 버튼 토글 (성별 / 시간대 / 상담종목)
   document.querySelectorAll('.choice-grid').forEach(function(group){
@@ -358,10 +363,7 @@
   });
 
   // 폼 제출 -------------------------------------------------
-  // TODO(다음 단계): 아래 handleSubmit 안에서 실제로
-  //   await supabase.from('reservations').insert({ name, phone, ... })
-  // 를 호출하도록 바꾸면 Supabase 테이블에 실시간으로 데이터가 쌓입니다.
-  document.getElementById('reserveForm').addEventListener('submit', function(e){
+  document.getElementById('reserveForm').addEventListener('submit', async function(e){
     e.preventDefault();
 
     var payload = {
@@ -369,11 +371,24 @@
       phone: document.getElementById('phone').value,
       gender: getSelected('gender'),
       preferred_time: getSelected('time'),
-      interest: getSelected('interest', true),
+      interest: (getSelected('interest', true) || []).join(', '),
       referral_source: document.getElementById('referral').value
     };
 
-    console.log('예약 신청 데이터 (아직 저장되지 않음):', payload);
+    var submitBtn = document.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '신청 중...';
+
+    const { error } = await supabaseClient.from('reservations').insert([payload]);
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = '사전예약 신청하기';
+
+    if (error) {
+      console.error('저장 실패:', error);
+      alert('신청 중 문제가 발생했어요. 잠시 후 다시 시도해주세요.');
+      return;
+    }
 
     document.getElementById('resultMsg').classList.add('show');
     document.getElementById('reserveForm').reset();
