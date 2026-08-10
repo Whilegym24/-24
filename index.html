@@ -349,6 +349,16 @@
   const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 </script>
 <script>
+  document.getElementById('phone').addEventListener('input', function(e){
+    var digits = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
+    var formatted = digits;
+    if (digits.length > 3 && digits.length <= 7) {
+      formatted = digits.slice(0, 3) + '-' + digits.slice(3);
+    } else if (digits.length > 7) {
+      formatted = digits.slice(0, 3) + '-' + digits.slice(3, 7) + '-' + digits.slice(7);
+    }
+    e.target.value = formatted;
+  });
   // 선택형 버튼 토글 (성별 / 시간대 / 상담종목)
   document.querySelectorAll('.choice-grid').forEach(function(group){
     var multi = group.dataset.multi === 'true';
