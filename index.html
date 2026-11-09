@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>웨일짐24 헬스&PT | 수원 매교역 신규 오픈 사전예약</title>
-<meta name="description" content="웨일짐24 헬스&PT 수원 권선구 세지로, 24시간 운영 신규 오픈. 1월 사전예약, 2월 결제 시작, 3월 8일 정식 오픈.">
+<title>웨일짐24 헬스&PT | 수원 매교역 24시간 헬스장 사전예약 특별혜택</title>
+<meta name="description" content="헬스 처음이어도 괜찮아요. 웨일짐24 헬스&PT 수원 매교역 24시간 헬스장 사전예약 특별혜택. 예약은 무료, 등록(결제)은 2월부터.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin
@@ -25,6 +25,7 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  body{word-break:keep-all;overflow-wrap:break-word;}
   body{
     margin:0;
     font-family:'Pretendard Variable', Pretendard, -apple-system, sans-serif;
@@ -41,7 +42,7 @@
     color:var(--ivory);
     position:relative;
     overflow:hidden;
-    padding:52px 24px 0;
+    padding:28px 24px 0;
   }
   .eyebrow{
     display:inline-flex;align-items:center;gap:6px;
@@ -52,7 +53,7 @@
     padding:6px 12px;border-radius:999px;
   }
   .hero h1{
-    font-size:36px;line-height:1.15;font-weight:800;margin:18px 0 10px;
+    font-size:clamp(26px,7.4vw,34px);line-height:1.2;font-weight:800;margin:18px 0 10px;
     letter-spacing:-0.01em;
   }
   .hero h1 span{color:var(--sun-400);}
@@ -61,6 +62,22 @@
   .tag{font-size:12px;background:rgba(255,255,255,0.08);border:1px solid var(--line);padding:6px 11px;border-radius:8px;color:var(--ivory);}
   .whale-scene{position:relative;height:190px;margin-top:10px;}
   .wave-divider{display:block;width:100%;height:60px;margin-top:20px;}
+  .top-info{background:var(--sun-400);border-radius:18px;padding:16px 16px 14px;margin:0 0 22px;box-shadow:0 10px 28px rgba(0,0,0,0.35);}
+  .ti-row{display:flex;gap:10px;align-items:flex-start;}
+  .ti-ic{width:30px;height:30px;flex-shrink:0;stroke:var(--navy-900);margin-top:2px;}
+  .ti-big{font-size:clamp(22px,6.3vw,28px);font-weight:800;line-height:1.25;letter-spacing:-0.02em;color:var(--navy-900);margin:0;}
+  .ti-big.accent{color:var(--navy-900);}
+  .ti-div{height:2px;background:rgba(8,24,38,0.22);border-radius:2px;margin:12px 0;}
+  .hero-cta{display:flex;gap:8px;margin:0 0 22px;}
+  .btn-primary{flex:1;display:flex;align-items:center;justify-content:center;background:var(--sun-400);color:var(--navy-900);font-weight:800;font-size:15px;padding:14px 16px;border-radius:14px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+  .btn-call{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid var(--line);color:var(--ivory);font-weight:700;font-size:14px;padding:14px 16px;border-radius:14px;text-decoration:none;white-space:nowrap;}
+  .btn-call svg{width:17px;height:17px;stroke:var(--sun-300);flex-shrink:0;}
+  .faq details{background:#fff;border:1px solid var(--ivory-dim);border-radius:12px;margin-bottom:8px;overflow:hidden;}
+  .faq summary{list-style:none;cursor:pointer;padding:14px 16px;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:10px;align-items:center;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:'+';font-size:20px;font-weight:800;color:var(--sky-400);flex-shrink:0;line-height:1;}
+  .faq details[open] summary::after{content:'\2212';}
+  .faq details p{margin:0;padding:0 16px 14px;font-size:13px;line-height:1.65;color:#41566b;}
   .dday{
     display:inline-flex;align-items:center;gap:6px;margin:14px 0 22px;
     background:var(--sun-400);color:var(--navy-900);
@@ -87,6 +104,8 @@
   .card{background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:16px;text-align:center;}
   .card .ic{width:34px;height:34px;margin:0 auto 8px;color:var(--sky-400);}
   .card p{font-size:13px;font-weight:600;margin:0;}
+  .card.wide{grid-column:span 2;}
+  .card small{display:block;font-size:11px;font-weight:500;color:#5a6b7d;margin-top:4px;line-height:1.4;}
 
   .benefit-list{display:flex;flex-direction:column;gap:12px;}
   .benefit-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:14px 16px;}
@@ -111,8 +130,8 @@
   .premium-divider{height:1px;background:var(--line);margin:22px 0 18px;}
   .cardio-logo{background:#fff;border-radius:12px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
   .cardio-logo img{max-height:50px;max-width:62%;width:auto;height:auto;object-fit:contain;}
-  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-  .stat{background:rgba(255,255,255,0.07);border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .stat{background:rgba(255,255,255,0.07);border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center;}
   .stat b{font-size:36px;font-weight:800;color:var(--sun-400);line-height:1;}
   .stat b small{font-size:15px;font-weight:700;margin-left:2px;}
   .stat span{display:block;font-size:12px;font-weight:700;margin-top:6px;color:var(--ivory);}
@@ -127,16 +146,23 @@
   .trainer .avatar{aspect-ratio:1;border-radius:50%;background:var(--ivory-dim);margin-bottom:8px;display:flex;align-items:center;justify-content:center;color:#9fb0c3;}
   .trainer p{font-size:11px;color:#5a6b7d;margin:0;font-weight:600;}
 
+  .notice{display:flex;gap:10px;align-items:center;background:var(--navy-800);color:var(--ivory);border-radius:12px;padding:12px 14px;margin:-6px 0 14px;}
+  .notice svg{width:22px;height:22px;flex-shrink:0;stroke:var(--sun-400);}
+  .notice .n-t{font-size:13px;font-weight:800;margin:0;}
+  .notice .n-d{font-size:12px;color:var(--sky-300);margin:2px 0 0;}
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .price-card{border-radius:14px;padding:16px;}
   .price-card.primary{background:linear-gradient(160deg,var(--sun-400),var(--sun-300));}
   .price-card.secondary{background:#fff;border:1px solid var(--ivory-dim);}
-  .price-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-  .price-head p{font-size:13px;font-weight:800;margin:0;}
-  .price-badge{font-size:10px;font-weight:700;background:rgba(255,255,255,0.6);padding:2px 7px;border-radius:999px;}
+  .price-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px;}
+  .price-head p{font-size:13px;font-weight:800;margin:0;white-space:nowrap;}
+  .price-badge{white-space:nowrap;font-size:10px;font-weight:700;background:rgba(255,255,255,0.6);padding:2px 7px;border-radius:999px;}
   .price-card .period{font-size:11px;font-weight:600;opacity:.75;margin:0 0 10px;}
   .price-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;padding:5px 0;border-top:1px dashed rgba(0,0,0,0.1);}
   .price-row:first-of-type{border-top:none;}
+  .price-perk{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(0,0,0,0.18);font-size:12px;font-weight:800;line-height:1.4;}
+  .price-perk small{display:block;font-size:10px;font-weight:600;opacity:.75;margin-top:2px;}
+  .price-perk small.strong{font-size:11px;font-weight:800;opacity:1;margin-top:4px;}
 
   .pt-card{margin-top:10px;background:var(--navy-800);color:var(--ivory);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
   .pt-card p.t{font-size:13px;font-weight:800;margin:0 0 2px;}
@@ -190,13 +216,21 @@
     transform:translateY(0);transition:transform .25s ease, opacity .25s ease;
   }
   .sticky-cta.hide{transform:translateY(120%);opacity:0;pointer-events:none;}
-  .sticky-cta a{
-    width:100%;max-width:488px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  .sticky-inner{width:100%;max-width:488px;display:flex;gap:8px;}
+  .sticky-cta .s-main{
+    flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;
     background:var(--sun-400);color:var(--navy-900);text-decoration:none;
     border-radius:14px;padding:14px 18px;font-weight:800;font-size:15px;
     box-shadow:0 6px 20px rgba(0,0,0,0.3);
   }
-  .sticky-cta a small{font-size:11px;font-weight:700;opacity:.75;}
+  .sticky-cta .s-main span,.sticky-cta .s-main small{white-space:nowrap;}
+  .sticky-cta .s-main small{font-size:11px;font-weight:700;opacity:.75;}
+  .sticky-cta .s-call{
+    width:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    background:var(--navy-700);border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  .sticky-cta .s-call svg{width:22px;height:22px;stroke:var(--sun-400);}
   body{padding-bottom:84px;}
 </style>
 </head>
@@ -206,17 +240,33 @@
 
   <!-- HERO -->
   <div class="hero">
-    <span class="eyebrow">신규 오픈</span>
-    <h1>수원 매교역 24시간<br><span>웨일짐24 헬스&PT</span></h1>
-    <p class="sub">1월 사전예약 → 2월 결제 시작 → 3월 8일 정식 오픈</p>
+    <div class="top-info">
+      <div class="ti-row">
+        <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <p class="ti-big">매교역 도보 5분거리</p>
+          <p class="ti-big">펠루시드 아파트 바로 옆</p>
+          <p class="ti-big">엔마트 건너편</p>
+        </div>
+      </div>
+      <div class="ti-div"></div>
+      <div class="ti-row">
+        <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p class="ti-big accent">24시간 연중무휴 운영</p>
+      </div>
+    </div>
+    <span class="eyebrow">웨일짐24 헬스&PT · 수원 매교역 신규 오픈</span>
+    <h1>헬스 처음이어도 괜찮아요<br><span>헬린이 놀이터</span></h1>
+    <p class="sub">1월 사전예약(무료) → 2월 등록(결제) → 3월 8일 정식 오픈</p>
     <div class="dday" id="ddayBox">
       <span id="ddayText">D-DAY 계산 중...</span>
     </div>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#apply">사전예약 신청하기</a>
+      <a class="btn-call" href="tel:01046634040"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
+    </div>
     <div class="tags">
       <span class="tag">200평대 2·3층 웨이트·유산소 분리형</span>
-      <span class="tag">펠루시드 아파트 바로 옆</span>
-      <span class="tag">매교역 도보 5분</span>
-      <span class="tag">24시간 운영</span>
     </div>
     <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
       <img src="logo.png" alt="웨일짐24 헬스&PT 로고" style="width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.25));">
@@ -228,46 +278,63 @@
 
   <!-- BANNER -->
   <div class="banner" style="margin-top:-4px;">
-    <p class="big">예약은 무료, 결제 없이 예약만!</p>
-    <p class="small">사전예약 1.1 ~ 1.31 · 결제는 2월부터 · 선착순 30명 한정</p>
+    <p class="big">예약은 무료! 등록(결제)은 2월부터</p>
+    <p class="small">사전예약 특별혜택 1.1 ~ 1.31 · 선착순 30명 한정</p>
   </div>
 
-  <!-- 리뉴얼 포인트 -->
+  <!-- 가격 -->
   <section>
-    <p class="section-label">Opening</p>
-    <h2>웨일짐24 헬스&PT는 이렇게 만들어집니다</h2>
-    <div class="grid2">
-      <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-        <p>쾌적한 신설 공간</p>
+    <p class="section-label">Special Offer</p>
+    <h2>사전예약 특별혜택</h2>
+    <div class="notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <div>
+        <p class="n-t">지금은 예약만 받아요</p>
+        <p class="n-d">등록(결제)은 2월부터 신청 순서대로 순차적으로 연락드려요</p>
       </div>
-      <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="12" r="2.5"/><path d="M9 12h6M4 9v6M20 9v6"/></svg>
-        <p>전체 기구 신규 교체</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card primary">
+        <div class="price-head"><p>1차 사전예약</p><span class="price-badge">선착순 30명</span></div>
+        <p class="period">1.1 ~ 1.15</p>
+        <div class="price-row"><span>12개월</span><span>33만원</span></div>
+        <div class="price-row"><span>6개월</span><span>23만원</span></div>
+        <div class="price-row"><span>3개월</span><span>13만원</span></div>
+        <div class="price-perk">운동복 + 수건 무료<small>월 11,000원 상당</small><small class="strong">12개월 이용 시<br>13.2만원 상당</small></div>
       </div>
-      <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2M4 12V8a2 2 0 0 1 2-2h2M12 12V4"/></svg>
-        <p>별도 화장실 시공</p>
+      <div class="price-card secondary">
+        <div class="price-head"><p>2차 사전예약</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
+        <p class="period">1.16 ~ 1.31</p>
+        <div class="price-row"><span>12개월</span><span>35만원</span></div>
+        <div class="price-row"><span>6개월</span><span>25만원</span></div>
+        <div class="price-row"><span>3개월</span><span>15만원</span></div>
+        <div class="price-perk">수건 무료<small>월 5,500원 상당</small><small class="strong">12개월 이용 시<br>6.6만원 상당</small></div>
       </div>
-      <div class="card">
-        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <p>24시간 연중무휴</p>
+    </div>
+    <div class="pt-card">
+      <div>
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+          <p class="t" style="margin:0;">1:1 PT</p>
+          <span class="price-badge" style="background:rgba(255,255,255,0.15);color:var(--sun-400);">선착순 20명</span>
+        </div>
+        <p class="d">사전예약 시 회원권 + 운동복 + 수건 무료</p>
       </div>
+      <p class="price">회당 4.5만원</p>
     </div>
   </section>
 
   <!-- 이벤트 혜택 -->
   <section style="padding-top:0;">
-    <p class="section-label">Benefit</p>
-    <h2>이런 혜택도 있어요</h2>
+    <p class="section-label">Beginner</p>
+    <h2>헬린이 놀이터 혜택</h2>
     <div class="benefit-list">
       <div class="benefit-item">
         <div class="benefit-ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div>
-          <p class="benefit-t">친구랑 동반등록 시 +1개월 추가</p>
-          <p class="benefit-d">같이 등록하면 둘 다 회원권 기간이 한 달 더 늘어나요</p>
+          <p class="benefit-t">친구랑 1년권 동반등록 시 +1개월 추가</p>
+          <p class="benefit-d">1년권(12개월)을 같이 등록하면 둘 다 한 달 더 늘어나요</p>
         </div>
       </div>
       <div class="benefit-item">
@@ -300,6 +367,39 @@
     </div>
   </section>
 
+  <!-- 리뉴얼 포인트 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Opening</p>
+    <h2>웨일짐24 헬스&PT는 이렇게 만들어집니다</h2>
+    <div class="grid2">
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+        <p>2개 층 분리 운영</p>
+        <small>2F 유산소존 · 3F 웨이트존</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p>24시간 연중무휴</p>
+        <small>내 일정에 맞춰 언제든</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg>
+        <p>해외 명품 머신 구성</p>
+        <small>해머스트렝스·파나타 등 5개 브랜드</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        <p>쾌적한 신설 공간</p>
+        <small>200평대 넓은 공간</small>
+      </div>
+      <div class="card wide">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        <p>개별 샤워실 및 파우더룸</p>
+        <small>프라이빗하게 씻고 가세요</small>
+      </div>
+    </div>
+  </section>
+
   <!-- 시설 -->
   <section style="padding-top:0;">
     <p class="section-label">Facility</p>
@@ -308,7 +408,7 @@
       <div class="photo"><span>3F 웨이트존</span></div>
       <div class="photo"><span>2F 유산소존</span></div>
       <div class="photo"><span>탈의실</span></div>
-      <div class="photo"><span>샤워실</span></div>
+      <div class="photo"><span>개별 샤워실·파우더룸</span></div>
     </div>
     <div class="premium">
       <p class="premium-eyebrow">PREMIUM MACHINE</p>
@@ -325,11 +425,12 @@
       <div class="premium-divider"></div>
 
       <h3>국내 명품 DRAX 2F 유산소존</h3>
-      <p class="p-sub">국내 프리미엄 브랜드 DRAX 유산소 기구로 구성했어요</p>
+      <p class="p-sub">DRAX 런닝머신과 천국의 계단, 마이 마운틴까지 갖췄어요</p>
       <div class="cardio-logo"><img src="brand-drax.png" alt="DRAX" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">DRAX</span></div>
       <div class="stat-row">
         <div class="stat"><b>8<small>대</small></b><span>런닝머신</span></div>
         <div class="stat"><b>3<small>대</small></b><span>천국의 계단</span></div>
+        <div class="stat"><b>2<small>대</small></b><span>마이 마운틴</span></div>
       </div>
     </div>
   </section>
@@ -357,32 +458,35 @@
     </div>
   </section>
 
-  <!-- 가격 -->
+  <!-- FAQ -->
   <section style="padding-top:0;">
-    <p class="section-label">Pricing</p>
-    <h2>오픈 등록가 안내</h2>
-    <div class="price-grid">
-      <div class="price-card primary">
-        <div class="price-head"><p>1차 등록</p><span class="price-badge">선착순 30명</span></div>
-        <p class="period">1.1 ~ 1.15</p>
-        <div class="price-row"><span>12개월</span><span>30만원</span></div>
-      </div>
-      <div class="price-card secondary">
-        <div class="price-head"><p>2차 등록</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
-        <p class="period">1.16 ~ 1.31</p>
-        <div class="price-row"><span>12개월</span><span>33만원</span></div>
-        <div class="price-row"><span>6개월</span><span>23만원</span></div>
-      </div>
-    </div>
-    <div class="pt-card">
-      <div>
-        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-          <p class="t" style="margin:0;">1:1 PT</p>
-          <span class="price-badge" style="background:rgba(255,255,255,0.15);color:var(--sun-400);">선착순 20명</span>
-        </div>
-        <p class="d">사전예약 시 회원권 무료 제공</p>
-      </div>
-      <p class="price">회당 4.5만원</p>
+    <p class="section-label">FAQ</p>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq">
+      <details>
+        <summary>왜 지금은 사전예약만 진행하나요?</summary>
+        <p>시설 공사 일정에 맞춰 결제를 받으려고 해요. 그래서 지금은 결제 없이 예약만 받고, 2월부터 신청 순서대로 순차적으로 연락드려요.</p>
+      </details>
+      <details>
+        <summary>예약하면 꼭 등록해야 하나요?</summary>
+        <p>아니요. 예약은 무료예요. 등록(결제)은 연락을 받으신 뒤에 결정하셔도 돼요.</p>
+      </details>
+      <details>
+        <summary>헬스가 처음인데 괜찮을까요?</summary>
+        <p>네, 그래서 헬린이 놀이터예요. 기구마다 QR코드로 운동 영상을 볼 수 있고, 매주 새로운 위클리 루틴을 안내해드려요. 등록하시면 PT 2회도 드려요.</p>
+      </details>
+      <details>
+        <summary>24시간 언제든 이용할 수 있나요?</summary>
+        <p>네, 24시간 연중무휴로 운영해요. 출근 전, 퇴근 후, 주말 새벽에도 이용하세요.</p>
+      </details>
+      <details>
+        <summary>친구와 같이 등록하면 어떤 혜택이 있나요?</summary>
+        <p>친구와 1년권(12개월)을 동반 등록하시면 두 분 모두 회원권 기간이 1개월 추가돼요.</p>
+      </details>
+      <details>
+        <summary>사전예약 특별혜택은 몇 명까지 받을 수 있나요?</summary>
+        <p>1차(1.1~1.15)와 2차(1.16~1.31) 각각 선착순 30명이고, PT는 선착순 20명이에요.</p>
+      </details>
     </div>
   </section>
 
@@ -393,17 +497,18 @@
     <div class="map-box">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <p style="font-size:13px;color:var(--navy-800);">경기도 수원시 권선구 세지로 110, 2·3층</p>
-      <p>펠루시드 아파트 바로 옆 · 엔마트 맞은편</p>
+      <p>펠루시드 아파트 바로 옆 · 엔마트 건너편</p>
       <p>매교역 도보 5분</p>
     </div>
     <a href="https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%8B%9C%20%EA%B6%8C%EC%84%A0%EA%B5%AC%20%EC%84%B8%EC%A7%80%EB%A1%9C%20110" target="_blank" rel="noopener" style="display:block;margin-top:10px;text-align:center;font-size:13px;font-weight:700;color:var(--navy-800);background:var(--ivory-dim);border-radius:10px;padding:11px;text-decoration:none;">네이버지도에서 길찾기</a>
+    <a href="tel:01046634040" style="display:block;margin-top:8px;text-align:center;font-size:13px;font-weight:800;color:var(--navy-900);background:var(--sun-400);border-radius:10px;padding:11px;text-decoration:none;">전화 문의 010-4663-4040</a>
   </section>
 
   <!-- 신청폼 -->
   <section class="form-section" id="apply">
     <p class="section-label" style="color:var(--sun-400);">Reservation</p>
     <h2>사전예약 신청</h2>
-    <p class="desc">결제 없이 예약만 진행됩니다. 신청 후 담당자가 방문 일정을 문자로 안내드려요.</p>
+    <p class="desc">예약은 무료예요. 신청 순서대로 2월부터 순차적으로 연락드려요.</p>
 
     <form id="reserveForm">
       <div class="field">
@@ -412,7 +517,7 @@
       </div>
       <div class="field">
         <label for="phone">연락처</label>
-        <input type="tel" id="phone" placeholder="010-0000-0000" required>
+        <input type="tel" id="phone" inputmode="numeric" placeholder="010-0000-0000" required>
       </div>
       <div class="field">
         <label>성별</label>
@@ -422,24 +527,18 @@
         </div>
       </div>
       <div class="field">
-        <label>희망 상담시간대</label>
-        <div class="choice-grid four" data-group="time">
-          <button type="button" class="choice">10:00~13:00</button>
-          <button type="button" class="choice">13:00~16:00</button>
-          <button type="button" class="choice">16:00~19:00</button>
-          <button type="button" class="choice">19:00~22:00</button>
+        <label>희망 회원권</label>
+        <div class="choice-grid" data-group="plan">
+          <button type="button" class="choice">12개월</button>
+          <button type="button" class="choice">6개월</button>
+          <button type="button" class="choice">3개월</button>
+          <button type="button" class="choice">PT (선착순 20명)</button>
         </div>
       </div>
-      <div class="field">
-        <label>상담종목 (복수선택)</label>
-        <div class="choice-grid" data-group="interest" data-multi="true">
-          <button type="button" class="choice">헬스</button>
-          <button type="button" class="choice">PT</button>
-        </div>
-      </div>
-      <div class="field">
+      <div class="field" id="referralField">
         <label for="referral">웨일짐24 헬스&PT를 어디서 알게 되셨나요?</label>
-        <select id="referral">
+        <select id="referral" required>
+          <option value="" disabled selected>선택해주세요</option>
           <option>배너</option>
           <option>현수막</option>
           <option>전단지</option>
@@ -454,15 +553,18 @@
     </form>
 
     <div class="result-msg" id="resultMsg">
-      <p>✓ 신청이 완료됐어요! 담당자가 곧 연락드릴게요.</p>
+      <p>✓ 사전예약이 접수됐어요! 신청 순서대로 2월부터 순차적으로 연락드릴게요.</p>
     </div>
   </section>
 
-  <footer>웨일짐24 헬스&PT · 경기도 수원시 권선구 세지로 110, 2·3층</footer>
+  <footer>웨일짐24 헬스&PT · 경기도 수원시 권선구 세지로 110, 2·3층<br>문의 010-4663-4040</footer>
 </div>
 
 <div class="sticky-cta" id="stickyCta">
-  <a href="#apply"><span>사전예약 신청하기</span><small>선착순 30명 · 1.1~1.31</small></a>
+  <div class="sticky-inner">
+    <a class="s-main" href="#apply"><span>사전예약 신청하기</span><small>선착순 30명</small></a>
+    <a class="s-call" href="tel:01046634040" aria-label="전화 문의"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -472,14 +574,16 @@
   const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 </script>
 <script>
-  // 하단 고정 버튼: 신청폼이 화면에 보이면 숨김
+  // 하단 고정 버튼: 첫 화면 신청 버튼이나 신청폼이 화면에 보이면 숨김
   (function(){
     var cta=document.getElementById('stickyCta');
     var form=document.getElementById('apply');
+    var heroCta=document.querySelector('.hero-cta');
     if(!cta||!form||!('IntersectionObserver' in window)) return;
-    new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ cta.classList.toggle('hide', en.isIntersecting); });
-    },{threshold:0.15}).observe(form);
+    var hid={form:false,hero:false};
+    function update(){ cta.classList.toggle('hide', hid.form||hid.hero); }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ hid.form=en.isIntersecting; }); update(); },{threshold:0.15}).observe(form);
+    if(heroCta) new IntersectionObserver(function(es){ es.forEach(function(en){ hid.hero=en.isIntersecting; }); update(); },{threshold:0.6}).observe(heroCta);
   })();
 
   // D-DAY 계산 (오픈일: 2027-03-08)
@@ -503,7 +607,7 @@
     e.target.value = formatted;
   });
 
-  // 선택형 버튼 토글 (성별 / 시간대 / 상담종목)
+  // 선택형 버튼 토글 (성별 / 희망 회원권)
   document.querySelectorAll('.choice-grid').forEach(function(group){
     var multi = group.dataset.multi === 'true';
     group.querySelectorAll('.choice').forEach(function(btn){
@@ -516,16 +620,31 @@
     });
   });
 
+  // 유입경로 자동 기록 (주소 끝에 ?src=banner 등이 붙어 있으면 자동 선택)
+  var SRC_MAP = {banner:'배너', placard:'현수막', flyer:'전단지', daangn:'당근마켓', instagram:'인스타그램', naver:'네이버'};
+  function applySrc(){
+    var p = (new URLSearchParams(location.search).get('src') || '').toLowerCase();
+    if (SRC_MAP[p]) {
+      document.getElementById('referral').value = SRC_MAP[p];
+      document.getElementById('referralField').style.display = 'none';
+    }
+  }
+  applySrc();
+
   // 폼 제출 -------------------------------------------------
   document.getElementById('reserveForm').addEventListener('submit', async function(e){
     e.preventDefault();
 
+    var gender = getSelected('gender');
+    if (!gender) { alert('성별을 선택해주세요.'); return; }
+    var plan = getSelected('plan');
+    if (!plan) { alert('희망 회원권을 선택해주세요.'); return; }
+
     var payload = {
-      name: document.getElementById('name').value,
+      name: document.getElementById('name').value.trim(),
       phone: document.getElementById('phone').value,
-      gender: getSelected('gender'),
-      preferred_time: getSelected('time'),
-      interest: (getSelected('interest', true) || []).join(', '),
+      gender: gender,
+      interest: plan,
       referral_source: document.getElementById('referral').value
     };
 
@@ -540,13 +659,14 @@
 
     if (error) {
       console.error('저장 실패:', error);
-      alert('신청 중 문제가 발생했어요. 잠시 후 다시 시도해주세요.');
+      alert('신청 중 문제가 발생했어요. 잠시 후 다시 시도하시거나 010-4663-4040으로 문의해주세요.');
       return;
     }
 
     document.getElementById('resultMsg').classList.add('show');
     document.getElementById('reserveForm').reset();
     document.querySelectorAll('.choice.selected').forEach(function(b){ b.classList.remove('selected'); });
+    applySrc();
   });
 
   function getSelected(groupName, multi){
