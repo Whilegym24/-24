@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>웨일짐24 헬스&PT | 안양5동 신규 오픈 사전예약</title>
-<meta name="description" content="웨일짐24 헬스&PT 안양5동, 24시간 운영 신규 오픈. 결제 없이 사전예약만 진행합니다.">
+<title>웨일짐24 헬스&PT | 수원 매교역 신규 오픈 사전예약</title>
+<meta name="description" content="웨일짐24 헬스&PT 수원 권선구 세지로, 24시간 운영 신규 오픈. 1월 사전예약, 2월 결제 시작, 3월 8일 정식 오픈.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin
@@ -99,8 +99,23 @@
   .photo{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,var(--ivory-dim),#dfe7ee);display:flex;align-items:center;justify-content:center;color:#9fb0c3;position:relative;overflow:hidden;}
   .photo span{position:absolute;bottom:8px;left:10px;font-size:12px;font-weight:700;color:var(--navy-800);background:rgba(255,255,255,0.85);padding:3px 8px;border-radius:6px;}
 
-  .brand-row{display:flex;gap:8px;}
-  .brand-chip{flex:1;background:var(--navy-800);color:var(--ivory);border-radius:10px;padding:10px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.02em;}
+  .premium{background:linear-gradient(160deg,var(--navy-700),var(--navy-900));color:var(--ivory);border-radius:18px;padding:22px 16px 18px;margin-top:26px;}
+  .premium-eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--sun-400);margin:0 0 6px;}
+  .premium h3{font-size:17px;font-weight:800;margin:0 0 4px;letter-spacing:-0.01em;}
+  .premium .p-sub{font-size:12px;color:var(--sky-300);margin:0 0 14px;line-height:1.5;}
+  .brand-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
+  .brand-chip{grid-column:span 2;height:62px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;padding:8px 10px;}
+  .brand-chip:nth-child(n+4){grid-column:span 3;}
+  .brand-chip img{max-width:84%;max-height:36px;width:auto;height:auto;object-fit:contain;}
+  .fb{display:none;font-size:12px;font-weight:800;color:var(--navy-800);letter-spacing:.02em;}
+  .premium-divider{height:1px;background:var(--line);margin:22px 0 18px;}
+  .cardio-logo{background:#fff;border-radius:12px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+  .cardio-logo img{max-height:50px;max-width:62%;width:auto;height:auto;object-fit:contain;}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .stat{background:rgba(255,255,255,0.07);border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;}
+  .stat b{font-size:36px;font-weight:800;color:var(--sun-400);line-height:1;}
+  .stat b small{font-size:15px;font-weight:700;margin-left:2px;}
+  .stat span{display:block;font-size:12px;font-weight:700;margin-top:6px;color:var(--ivory);}
 
   .check-list{display:flex;flex-direction:column;gap:10px;}
   .check-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;}
@@ -165,6 +180,24 @@
   .result-msg p{margin:0;font-size:14px;font-weight:700;color:var(--sky-300);}
 
   footer{padding:22px 24px 40px;text-align:center;color:#9fb0c3;font-size:11px;background:var(--navy-900);}
+
+  /* 하단 고정 신청 버튼 */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    display:flex;justify-content:center;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background:linear-gradient(to top, rgba(8,24,38,0.92) 60%, rgba(8,24,38,0));
+    transform:translateY(0);transition:transform .25s ease, opacity .25s ease;
+  }
+  .sticky-cta.hide{transform:translateY(120%);opacity:0;pointer-events:none;}
+  .sticky-cta a{
+    width:100%;max-width:488px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:var(--sun-400);color:var(--navy-900);text-decoration:none;
+    border-radius:14px;padding:14px 18px;font-weight:800;font-size:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  .sticky-cta a small{font-size:11px;font-weight:700;opacity:.75;}
+  body{padding-bottom:84px;}
 </style>
 </head>
 <body>
@@ -174,15 +207,16 @@
   <!-- HERO -->
   <div class="hero">
     <span class="eyebrow">신규 오픈</span>
-    <h1>안양5동 24시간<br><span>웨일짐24 헬스&PT</span></h1>
-    <p class="sub">공사기간 12.1~1.15 · 1.25 정식 오픈</p>
+    <h1>수원 매교역 24시간<br><span>웨일짐24 헬스&PT</span></h1>
+    <p class="sub">1월 사전예약 → 2월 결제 시작 → 3월 8일 정식 오픈</p>
     <div class="dday" id="ddayBox">
       <span id="ddayText">D-DAY 계산 중...</span>
     </div>
     <div class="tags">
-      <span class="tag">200평대 쾌적한 공간</span>
-      <span class="tag">프리미엄 기구 40대</span>
-      <span class="tag">지상 24시간 운영</span>
+      <span class="tag">200평대 2·3층 웨이트·유산소 분리형</span>
+      <span class="tag">펠루시드 아파트 바로 옆</span>
+      <span class="tag">매교역 도보 5분</span>
+      <span class="tag">24시간 운영</span>
     </div>
     <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
       <img src="logo.png" alt="웨일짐24 헬스&PT 로고" style="width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.25));">
@@ -195,7 +229,7 @@
   <!-- BANNER -->
   <div class="banner" style="margin-top:-4px;">
     <p class="big">예약은 무료, 결제 없이 예약만!</p>
-    <p class="small">사전예약 기간 11.23 ~ 12.14 · 선착순 30명 한정</p>
+    <p class="small">사전예약 1.1 ~ 1.31 · 결제는 2월부터 · 선착순 30명 한정</p>
   </div>
 
   <!-- 리뉴얼 포인트 -->
@@ -271,16 +305,32 @@
     <p class="section-label">Facility</p>
     <h2>시설 둘러보기</h2>
     <div class="photo-grid">
-      <div class="photo"><span>웨이트존</span></div>
-      <div class="photo"><span>유산소존</span></div>
+      <div class="photo"><span>3F 웨이트존</span></div>
+      <div class="photo"><span>2F 유산소존</span></div>
       <div class="photo"><span>탈의실</span></div>
       <div class="photo"><span>샤워실</span></div>
     </div>
-    <p style="font-size:13px;font-weight:700;margin:24px 0 10px;color:#5a6b7d;">프리미엄 머신 총 40여대</p>
-    <div class="brand-row">
-      <div class="brand-chip">CYBEX</div>
-      <div class="brand-chip">NEWTECH</div>
-      <div class="brand-chip">BOOTY BUILDER</div>
+    <div class="premium">
+      <p class="premium-eyebrow">PREMIUM MACHINE</p>
+      <h3>해외 명품 기구로 채운 3F 웨이트존</h3>
+      <p class="p-sub">세계적인 스트렝스 브랜드 기구를 한 곳에서 만나보세요</p>
+      <div class="brand-row">
+      <div class="brand-chip"><img src="brand-hammer.png" alt="HAMMER STRENGTH" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">HAMMER STRENGTH</span></div>
+      <div class="brand-chip"><img src="brand-bootybuilder.png" alt="BOOTY BUILDER" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">BOOTY BUILDER</span></div>
+      <div class="brand-chip"><img src="brand-nautilus.png" alt="NAUTILUS" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">NAUTILUS</span></div>
+      <div class="brand-chip"><img src="brand-panatta.png" alt="PANATTA" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">PANATTA</span></div>
+      <div class="brand-chip"><img src="brand-lifefitness.png" alt="LIFE FITNESS" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">LIFE FITNESS</span></div>
+      </div>
+
+      <div class="premium-divider"></div>
+
+      <h3>국내 명품 DRAX 2F 유산소존</h3>
+      <p class="p-sub">국내 프리미엄 브랜드 DRAX 유산소 기구로 구성했어요</p>
+      <div class="cardio-logo"><img src="brand-drax.png" alt="DRAX" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">DRAX</span></div>
+      <div class="stat-row">
+        <div class="stat"><b>8<small>대</small></b><span>런닝머신</span></div>
+        <div class="stat"><b>3<small>대</small></b><span>천국의 계단</span></div>
+      </div>
     </div>
   </section>
 
@@ -314,18 +364,24 @@
     <div class="price-grid">
       <div class="price-card primary">
         <div class="price-head"><p>1차 등록</p><span class="price-badge">선착순 30명</span></div>
-        <p class="period">1.5 ~ 1.20</p>
+        <p class="period">1.1 ~ 1.15</p>
         <div class="price-row"><span>12개월</span><span>30만원</span></div>
       </div>
       <div class="price-card secondary">
         <div class="price-head"><p>2차 등록</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
-        <p class="period">1.21 ~ 2.5</p>
+        <p class="period">1.16 ~ 1.31</p>
         <div class="price-row"><span>12개월</span><span>33만원</span></div>
-        <div class="price-row"><span>6개월</span><span>24만원</span></div>
+        <div class="price-row"><span>6개월</span><span>23만원</span></div>
       </div>
     </div>
     <div class="pt-card">
-      <div><p class="t">1:1 PT</p><p class="d">사전예약 시 회원권 무료 제공</p></div>
+      <div>
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+          <p class="t" style="margin:0;">1:1 PT</p>
+          <span class="price-badge" style="background:rgba(255,255,255,0.15);color:var(--sun-400);">선착순 20명</span>
+        </div>
+        <p class="d">사전예약 시 회원권 무료 제공</p>
+      </div>
       <p class="price">회당 4.5만원</p>
     </div>
   </section>
@@ -336,8 +392,11 @@
     <h2>오시는 길</h2>
     <div class="map-box">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <p>안양5동 새마을시장 인근, 5층</p>
+      <p style="font-size:13px;color:var(--navy-800);">경기도 수원시 권선구 세지로 110, 2·3층</p>
+      <p>펠루시드 아파트 바로 옆 · 엔마트 맞은편</p>
+      <p>매교역 도보 5분</p>
     </div>
+    <a href="https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%8B%9C%20%EA%B6%8C%EC%84%A0%EA%B5%AC%20%EC%84%B8%EC%A7%80%EB%A1%9C%20110" target="_blank" rel="noopener" style="display:block;margin-top:10px;text-align:center;font-size:13px;font-weight:700;color:var(--navy-800);background:var(--ivory-dim);border-radius:10px;padding:11px;text-decoration:none;">네이버지도에서 길찾기</a>
   </section>
 
   <!-- 신청폼 -->
@@ -381,11 +440,12 @@
       <div class="field">
         <label for="referral">웨일짐24 헬스&PT를 어디서 알게 되셨나요?</label>
         <select id="referral">
-          <option>인스타그램</option>
+          <option>배너</option>
+          <option>현수막</option>
+          <option>전단지</option>
           <option>당근마켓</option>
+          <option>인스타그램</option>
           <option>네이버</option>
-          <option>전단지 / 현수막</option>
-          <option>지인소개</option>
           <option>기타</option>
         </select>
       </div>
@@ -398,7 +458,11 @@
     </div>
   </section>
 
-  <footer>웨일짐24 헬스&PT · 경기도 안양시 만안구 안양동</footer>
+  <footer>웨일짐24 헬스&PT · 경기도 수원시 권선구 세지로 110, 2·3층</footer>
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#apply"><span>사전예약 신청하기</span><small>선착순 30명 · 1.1~1.31</small></a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -408,9 +472,19 @@
   const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 </script>
 <script>
-  // D-DAY 계산 (오픈일: 2027-01-25)
+  // 하단 고정 버튼: 신청폼이 화면에 보이면 숨김
   (function(){
-    var openDate = new Date('2027-01-25T00:00:00+09:00');
+    var cta=document.getElementById('stickyCta');
+    var form=document.getElementById('apply');
+    if(!cta||!form||!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ cta.classList.toggle('hide', en.isIntersecting); });
+    },{threshold:0.15}).observe(form);
+  })();
+
+  // D-DAY 계산 (오픈일: 2027-03-08)
+  (function(){
+    var openDate = new Date('2027-03-08T00:00:00+09:00');
     var today = new Date();
     var diff = Math.ceil((openDate - today) / (1000 * 60 * 60 * 24));
     var text = diff > 0 ? ('오픈까지 D-' + diff) : (diff === 0 ? '오늘 그랜드 오픈!' : '그랜드 오픈');
