@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>웨일짐24 헬스&PT | 수원 매교역 24시간 헬스장 사전예약 특별혜택</title>
+<meta name="description" content="헬스 처음이어도 괜찮아요. 웨일짐24 헬스&PT 수원 매교역 24시간 헬스장 사전예약 특별혜택. 예약은 무료, 등록(결제)은 2월부터.">
+<meta name="theme-color" content="#0C2340">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="웨일짐24 헬스&PT">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="헬스 처음이어도 괜찮아요, 헬린이 놀이터 | 웨일짐24 헬스&PT">
+<meta property="og:description" content="수원 매교역 도보 5분거리 · 24시간 연중무휴 · 사전예약 특별혜택 (예약은 무료, 등록은 2월부터)">
+<meta property="og:image" content="https://whalegym24.vercel.app/og-image.png?v=20261112">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://whalegym24.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png?v=20261112">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<style>
+  :root{
+    --navy-900:#081826;
+    --navy-800:#0C2340;
+    --navy-700:#123058;
+    --sky-400:#4FB3E8;
+    --sky-300:#8ED2F2;
+    --sun-400:#FFC93C;
+    --sun-300:#FFDD85;
+    --ivory:#F5F7FA;
+    --ivory-dim:#E8EEF4;
+    --ink:#0C2340;
+    --line: rgba(255,255,255,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{word-break:keep-all;overflow-wrap:break-word;}
+  body{
+    margin:0;
+    font-family:'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+    background:var(--ivory);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:520px;margin:0 auto;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:radial-gradient(120% 140% at 20% 0%, var(--navy-700) 0%, var(--navy-800) 55%, var(--navy-900) 100%);
+    color:var(--ivory);
+    position:relative;
+    overflow:hidden;
+    padding:16px 24px 0;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12px;font-weight:600;letter-spacing:.04em;
+    color:var(--sun-300);
+    background:rgba(255,201,60,0.12);
+    border:1px solid rgba(255,201,60,0.35);
+    padding:6px 12px;border-radius:999px;
+  }
+  .hero h1{
+    font-size:clamp(26px,7.4vw,34px);line-height:1.2;font-weight:800;margin:18px 0 10px;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 span{color:var(--sun-400);}
+  .hero p.sub{font-size:15px;color:var(--sky-300);margin:0 0 22px;font-weight:500;}
+  .hero .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+  .tag{font-size:12px;background:rgba(255,255,255,0.08);border:1px solid var(--line);padding:6px 11px;border-radius:8px;color:var(--ivory);}
+  .whale-scene{position:relative;margin-top:4px;}
+  .wave-divider{display:block;width:100%;height:60px;margin-top:20px;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 14px;}
+  .tb-brand{display:flex;align-items:center;gap:8px;min-width:0;}
+  .tb-brand img{width:32px;height:32px;object-fit:contain;flex-shrink:0;}
+  .tb-brand span{font-size:15px;font-weight:800;color:#fff;white-space:nowrap;letter-spacing:-0.01em;}
+  .tb-actions{display:flex;gap:6px;flex-shrink:0;}
+  .tb-call,.tb-apply{display:flex;align-items:center;gap:5px;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap;}
+  .tb-call{background:rgba(255,255,255,0.1);border:1px solid var(--line);color:var(--ivory);}
+  .tb-call svg{width:14px;height:14px;stroke:var(--sun-300);flex-shrink:0;}
+  .tb-apply{background:var(--sun-400);color:var(--navy-900);}
+  .top-info{background:var(--sun-400);border-radius:18px;padding:16px 16px 14px;margin:0 0 22px;box-shadow:0 10px 28px rgba(0,0,0,0.35);}
+  .ti-row{display:flex;gap:10px;align-items:flex-start;}
+  .ti-ic{width:30px;height:30px;flex-shrink:0;stroke:var(--navy-900);margin-top:2px;}
+  .ti-big{font-size:clamp(22px,6.3vw,28px);font-weight:800;line-height:1.25;letter-spacing:-0.02em;color:var(--navy-900);margin:0;}
+  .ti-big.accent{color:var(--navy-900);}
+  .ti-div{height:2px;background:rgba(8,24,38,0.22);border-radius:2px;margin:12px 0;}
+  .hero-cta{display:flex;gap:8px;margin:0 0 22px;}
+  .btn-primary{flex:1;display:flex;align-items:center;justify-content:center;background:var(--sun-400);color:var(--navy-900);font-weight:800;font-size:15px;padding:14px 16px;border-radius:14px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+  .btn-call{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid var(--line);color:var(--ivory);font-weight:700;font-size:14px;padding:14px 16px;border-radius:14px;text-decoration:none;white-space:nowrap;}
+  .btn-call svg{width:17px;height:17px;stroke:var(--sun-300);flex-shrink:0;}
+  .faq details{background:#fff;border:1px solid var(--ivory-dim);border-radius:12px;margin-bottom:8px;overflow:hidden;}
+  .faq summary{list-style:none;cursor:pointer;padding:14px 16px;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:10px;align-items:center;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:'+';font-size:20px;font-weight:800;color:var(--sky-400);flex-shrink:0;line-height:1;}
+  .faq details[open] summary::after{content:'\2212';}
+  .faq details p{margin:0;padding:0 16px 14px;font-size:13px;line-height:1.65;color:#41566b;}
+  .dday{
+    display:inline-flex;align-items:center;gap:6px;margin:14px 0 22px;
+    background:var(--sun-400);color:var(--navy-900);
+    font-size:15px;font-weight:800;padding:8px 16px;border-radius:999px;
+    letter-spacing:.01em;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:40px 24px;}
+  .section-label{
+    font-size:12px;font-weight:700;color:var(--sky-400);
+    letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;
+  }
+  h2{font-size:21px;font-weight:800;margin:0 0 18px;letter-spacing:-0.01em;}
+
+  .banner{
+    background:linear-gradient(135deg, var(--sun-400), var(--sun-300));
+    border-radius:16px;padding:18px 20px;text-align:center;margin:0 24px 8px;
+  }
+  .banner p.big{font-size:15px;font-weight:800;color:var(--navy-900);margin:0 0 4px;}
+  .banner p.small{font-size:12px;color:var(--navy-800);margin:0;font-weight:600;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .card{background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:16px;text-align:center;}
+  .card .ic{width:34px;height:34px;margin:0 auto 8px;color:var(--sky-400);}
+  .card p{font-size:13px;font-weight:600;margin:0;}
+  .card.wide{grid-column:span 2;}
+  .card small{display:block;font-size:11px;font-weight:500;color:#5a6b7d;margin-top:4px;line-height:1.4;}
+
+  .benefit-list{display:flex;flex-direction:column;gap:12px;}
+  .benefit-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--ivory-dim);border-radius:14px;padding:14px 16px;}
+  .benefit-ic{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--navy-800);display:flex;align-items:center;justify-content:center;}
+  .benefit-ic svg{width:19px;height:19px;stroke:var(--sun-400);}
+  .benefit-t{font-size:14px;font-weight:700;margin:0 0 3px;}
+  .benefit-d{font-size:12px;color:#5a6b7d;margin:0;line-height:1.5;}
+
+  .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .photo{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,var(--ivory-dim),#dfe7ee);display:flex;align-items:center;justify-content:center;color:#9fb0c3;position:relative;overflow:hidden;}
+  .photo span{position:absolute;bottom:8px;left:10px;font-size:12px;font-weight:700;color:var(--navy-800);background:rgba(255,255,255,0.85);padding:3px 8px;border-radius:6px;}
+
+  .premium{background:linear-gradient(160deg,var(--navy-700),var(--navy-900));color:var(--ivory);border-radius:18px;padding:22px 16px 18px;margin-top:26px;}
+  .premium-eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--sun-400);margin:0 0 6px;}
+  .premium h3{font-size:17px;font-weight:800;margin:0 0 4px;letter-spacing:-0.01em;}
+  .premium .p-sub{font-size:12px;color:var(--sky-300);margin:0 0 14px;line-height:1.5;}
+  .brand-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
+  .brand-chip{grid-column:span 2;height:62px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;padding:8px 10px;}
+  .brand-chip:nth-child(n+4){grid-column:span 3;}
+  .brand-chip img{max-width:84%;max-height:36px;width:auto;height:auto;object-fit:contain;}
+  .fb{display:none;font-size:12px;font-weight:800;color:var(--navy-800);letter-spacing:.02em;}
+  .premium-divider{height:1px;background:var(--line);margin:22px 0 18px;}
+  .cardio-logo{background:#fff;border-radius:12px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+  .cardio-logo img{max-height:50px;max-width:62%;width:auto;height:auto;object-fit:contain;}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .stat{background:rgba(255,255,255,0.07);border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center;}
+  .stat b{font-size:36px;font-weight:800;color:var(--sun-400);line-height:1;}
+  .stat b small{font-size:15px;font-weight:700;margin-left:2px;}
+  .stat span{display:block;font-size:12px;font-weight:700;margin-top:6px;color:var(--ivory);}
+
+  .check-list{display:flex;flex-direction:column;gap:10px;}
+  .check-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;}
+  .check-item .dot{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:var(--sky-400);display:flex;align-items:center;justify-content:center;}
+  .check-item .dot svg{width:12px;height:12px;stroke:#fff;}
+
+  .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 -10px;}
+  .member{background:#fff;border:1px solid var(--ivory-dim);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;}
+  .member img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
+  .m-body{padding:10px 12px 14px;}
+  .role-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--navy-900);background:var(--sun-400);padding:3px 8px;border-radius:999px;margin-bottom:6px;}
+  .m-title{font-size:15px;font-weight:800;margin:0;color:var(--navy-800);}
+  .m-spec{font-size:12.5px;font-weight:800;margin:3px 0 0;color:#1B6FA3;}
+  .m-quote{font-size:12.5px;font-weight:700;margin:6px 0 0;color:var(--navy-800);line-height:1.5;}
+  .m-msg{font-size:12px;line-height:1.55;color:#41566b;margin:6px 0 0;}
+
+  .notice{display:flex;gap:10px;align-items:center;background:var(--navy-800);color:var(--ivory);border-radius:12px;padding:12px 14px;margin:-6px 0 14px;}
+  .notice svg{width:22px;height:22px;flex-shrink:0;stroke:var(--sun-400);}
+  .notice .n-t{font-size:13px;font-weight:800;margin:0;}
+  .notice .n-d{font-size:12px;color:var(--sky-300);margin:2px 0 0;}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .price-card{border-radius:14px;padding:16px;}
+  .price-card.primary{background:linear-gradient(160deg,var(--sun-400),var(--sun-300));}
+  .price-card.secondary{background:#fff;border:1px solid var(--ivory-dim);}
+  .price-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px;}
+  .price-head p{font-size:13px;font-weight:800;margin:0;white-space:nowrap;}
+  .price-badge{white-space:nowrap;font-size:10px;font-weight:700;background:rgba(255,255,255,0.6);padding:2px 7px;border-radius:999px;}
+  .price-card .period{font-size:11px;font-weight:600;opacity:.75;margin:0 0 10px;}
+  .price-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;padding:5px 0;border-top:1px dashed rgba(0,0,0,0.1);}
+  .price-row:first-of-type{border-top:none;}
+  .price-perk{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(0,0,0,0.18);font-size:12px;font-weight:800;line-height:1.4;}
+  .price-perk small{display:block;font-size:10px;font-weight:600;opacity:.75;margin-top:2px;}
+  .price-perk small.strong{font-size:11px;font-weight:800;opacity:1;margin-top:4px;}
+
+  .pt-card{margin-top:10px;background:var(--navy-800);color:var(--ivory);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
+  .pt-card p.t{font-size:13px;font-weight:800;margin:0 0 2px;}
+  .pt-card p.d{font-size:11px;color:var(--sky-300);margin:0;}
+  .pt-card p.price{font-size:15px;font-weight:800;margin:0;color:var(--sun-400);}
+
+  .map-box{border-radius:14px;background:var(--ivory-dim);height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#5a6b7d;}
+  .map-box p{font-size:12px;font-weight:600;margin:0;}
+
+  /* ---------- FORM ---------- */
+  .form-section{background:var(--navy-800);color:var(--ivory);}
+  .form-section h2{color:#fff;}
+  .form-section .desc{font-size:13px;color:var(--sky-300);margin:0 0 22px;font-weight:500;}
+  .field{margin-bottom:16px;}
+  label{display:block;font-size:12px;font-weight:700;color:var(--sky-300);margin-bottom:6px;letter-spacing:.02em;}
+  input[type=text],input[type=tel],select,textarea{
+    width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--line);
+    color:#fff;border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;
+  }
+  input::placeholder{color:rgba(255,255,255,0.35);}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238ED2F2' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;}
+  select option{color:#000;}
+  .choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .choice-grid.four{grid-template-columns:1fr 1fr;}
+  .choice{
+    background:rgba(255,255,255,0.06);border:1px solid var(--line);color:#fff;
+    border-radius:10px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;
+    font-family:inherit;text-align:center;transition:.15s;
+  }
+  .choice.selected{background:var(--sky-400);border-color:var(--sky-400);color:var(--navy-900);}
+  .submit-btn{
+    width:100%;background:var(--sun-400);color:var(--navy-900);border:none;
+    border-radius:12px;padding:15px;font-size:15px;font-weight:800;cursor:pointer;
+    font-family:inherit;margin-top:6px;
+  }
+  .submit-btn:active{transform:scale(0.99);}
+  .note{font-size:11px;color:rgba(255,255,255,0.45);text-align:center;margin-top:12px;line-height:1.6;}
+
+  .result-msg{display:none;background:rgba(79,179,232,0.12);border:1px solid var(--sky-400);border-radius:14px;padding:20px 16px;text-align:left;margin-top:16px;}
+  .result-msg.show{display:block;}
+  .result-msg .r-title{font-size:17px;font-weight:800;color:#fff;margin:0 0 10px;text-align:center;}
+  .r-steps{list-style:none;margin:0 0 14px;padding:0;counter-reset:s;}
+  .r-steps li{counter-increment:s;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;color:var(--ivory);padding:6px 0;}
+  .r-steps li::before{content:counter(s);flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--sun-400);color:var(--navy-900);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+  .r-steps b{color:var(--sun-400);}
+  .r-share{width:100%;background:var(--sun-400);color:var(--navy-900);border:none;border-radius:12px;padding:13px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;margin-bottom:10px;line-height:1.4;}
+  .r-share small{display:block;font-size:11px;font-weight:700;opacity:.75;}
+  .r-call{display:block;text-align:center;font-size:12px;color:var(--sky-300);text-decoration:none;font-weight:600;}
+  .price-row .pv{text-align:right;}
+  .price-row .pv small{display:block;font-size:10px;font-weight:600;opacity:.7;margin-top:1px;}
+  .share-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:var(--navy-800);color:var(--sun-400);border:none;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;cursor:pointer;font-family:inherit;}
+  .share-btn svg{width:14px;height:14px;stroke:var(--sun-400);flex-shrink:0;}
+  .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);background:rgba(8,24,38,.94);color:#fff;font-size:13px;font-weight:700;padding:11px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:80;max-width:86%;text-align:center;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .map-svg{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--ivory-dim);margin-bottom:10px;}
+
+  footer{padding:22px 24px 40px;text-align:center;color:#9fb0c3;font-size:11px;background:var(--navy-900);}
+
+  /* 하단 고정 신청 버튼 */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    display:flex;justify-content:center;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background:linear-gradient(to top, rgba(8,24,38,0.92) 60%, rgba(8,24,38,0));
+    transform:translateY(0);transition:transform .25s ease, opacity .25s ease;
+  }
+  .sticky-cta.hide{transform:translateY(120%);opacity:0;pointer-events:none;}
+  .sticky-inner{width:100%;max-width:488px;display:flex;gap:8px;}
+  .sticky-cta .s-main{
+    flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:var(--sun-400);color:var(--navy-900);text-decoration:none;
+    border-radius:14px;padding:14px 18px;font-weight:800;font-size:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  .sticky-cta .s-main span,.sticky-cta .s-main small{white-space:nowrap;}
+  .sticky-cta .s-main small{font-size:11px;font-weight:700;opacity:.75;}
+  .sticky-cta .s-call{
+    width:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    background:var(--navy-700);border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  .sticky-cta .s-call svg{width:22px;height:22px;stroke:var(--sun-400);}
+  body{padding-bottom:84px;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topbar">
+      <div class="tb-brand"><img src="logo.png?v=20261112" alt=""><span>웨일짐24</span></div>
+      <div class="tb-actions">
+        <a class="tb-call" href="tel:01046634040"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화</a>
+        <a class="tb-apply" href="#apply">사전예약</a>
+      </div>
+    </div>
+    <div class="top-info">
+      <div class="ti-row">
+        <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <p class="ti-big">매교역 도보 5분거리</p>
+          <p class="ti-big">펠루시드 아파트 바로 옆</p>
+          <p class="ti-big">엔마트 건너편</p>
+        </div>
+      </div>
+      <div class="ti-div"></div>
+      <div class="ti-row">
+        <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p class="ti-big accent">24시간 연중무휴 운영</p>
+      </div>
+    </div>
+    <span class="eyebrow">웨일짐24 헬스&PT · 수원 매교역 신규 오픈</span>
+    <h1>헬스 처음이어도 괜찮아요<br><span>헬린이 놀이터</span></h1>
+    <p class="sub">1월 사전예약(무료) → 2월 등록(결제) → 3월 8일 정식 오픈</p>
+    <div class="dday" id="ddayBox">
+      <span id="ddayText">D-DAY 계산 중...</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#apply">사전예약 신청하기</a>
+      <a class="btn-call" href="tel:01046634040"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
+    </div>
+    <div class="tags">
+      <span class="tag">200평대 2·3층 웨이트·유산소 분리형</span>
+    </div>
+    <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
+      <img src="logo.png?v=20261112" alt="웨일짐24 헬스&PT 로고" style="width:min(300px,84vw);height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 10px 28px rgba(79,179,232,0.28));">
+    </div>
+    <svg class="wave-divider" viewBox="0 0 500 40" preserveAspectRatio="none">
+      <path d="M0,20 C125,50 375,-10 500,20 L500,40 L0,40 Z" fill="#F5F7FA"/>
+    </svg>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner" style="margin-top:-4px;">
+    <p class="big">예약은 무료! 등록(결제)은 2월부터</p>
+    <p class="small">사전예약 특별혜택 1.1 ~ 1.31 · 선착순 30명 한정</p>
+  </div>
+
+  <!-- 가격 -->
+  <section>
+    <p class="section-label">Special Offer</p>
+    <h2>사전예약 특별혜택</h2>
+    <div class="notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <div>
+        <p class="n-t">지금은 예약만 받아요</p>
+        <p class="n-d">등록(결제)은 2월부터 신청 순서대로 순차적으로 연락드려요</p>
+      </div>
+    </div>
+    <div class="price-grid">
+      <div class="price-card primary">
+        <div class="price-head"><p>1차 사전예약</p><span class="price-badge">선착순 30명</span></div>
+        <p class="period">1.1 ~ 1.15</p>
+        <div class="price-row"><span>12개월</span><span class="pv">33만원<small>월 27,500원</small></span></div>
+        <div class="price-row"><span>6개월</span><span>23만원</span></div>
+        <div class="price-row"><span>3개월</span><span>13만원</span></div>
+        <div class="price-perk">운동복 + 수건 무료<small>월 11,000원 상당</small><small class="strong">12개월 이용 시<br>13.2만원 상당</small></div>
+      </div>
+      <div class="price-card secondary">
+        <div class="price-head"><p>2차 사전예약</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
+        <p class="period">1.16 ~ 1.31</p>
+        <div class="price-row"><span>12개월</span><span class="pv">35만원<small>월 약 29,200원</small></span></div>
+        <div class="price-row"><span>6개월</span><span>25만원</span></div>
+        <div class="price-row"><span>3개월</span><span>15만원</span></div>
+        <div class="price-perk">수건 무료<small>월 5,500원 상당</small><small class="strong">12개월 이용 시<br>6.6만원 상당</small></div>
+      </div>
+    </div>
+    <div class="pt-card">
+      <div>
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+          <p class="t" style="margin:0;">1:1 PT</p>
+          <span class="price-badge" style="background:rgba(255,255,255,0.15);color:var(--sun-400);">선착순 20명</span>
+        </div>
+        <p class="d">사전예약 시 회원권 + 운동복 + 수건 무료</p>
+      </div>
+      <p class="price">회당 4.5만원</p>
+    </div>
+  </section>
+
+  <!-- 이벤트 혜택 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Beginner</p>
+    <h2>헬린이 놀이터 혜택</h2>
+    <div class="benefit-list">
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">친구랑 1년권 동반등록 시 +1개월 추가</p>
+          <p class="benefit-d">1년권(12개월)을 같이 등록하면 둘 다 한 달 더 늘어나요</p>
+          <button type="button" class="share-btn" onclick="shareFriend()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>친구에게 링크 보내기</button>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">헬린이 놀이터 QR 운동영상</p>
+          <p class="benefit-d">기구마다 QR코드 부착, 찍으면 바로 사용법 영상이 나와요</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">위클리 루틴 제공</p>
+          <p class="benefit-d">매주 새로운 운동 루틴을 짜서 안내해드려요</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <p class="benefit-t">회원권 등록 시 PT 2회 제공</p>
+          <p class="benefit-d">헬스 회원권만 등록하셔도 PT 2회를 무료로 받아보실 수 있어요</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 리뉴얼 포인트 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Opening</p>
+    <h2>웨일짐24 헬스&PT는 이렇게 만들어집니다</h2>
+    <div class="grid2">
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+        <p>2개 층 분리 운영</p>
+        <small>2F 유산소존 · 3F 웨이트존</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p>24시간 연중무휴</p>
+        <small>내 일정에 맞춰 언제든</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg>
+        <p>해외 명품 머신 구성</p>
+        <small>해머스트렝스·파나타 등 5개 브랜드</small>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        <p>쾌적한 신설 공간</p>
+        <small>200평대 넓은 공간</small>
+      </div>
+      <div class="card wide">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        <p>개별 샤워실 및 파우더룸</p>
+        <small>프라이빗하게 씻고 가세요</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시설 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Facility</p>
+    <h2>시설 둘러보기</h2>
+    <div class="photo-grid">
+      <div class="photo"><span>3F 웨이트존</span></div>
+      <div class="photo"><span>2F 유산소존</span></div>
+      <div class="photo"><span>탈의실</span></div>
+      <div class="photo"><span>개별 샤워실·파우더룸</span></div>
+    </div>
+    <div class="premium">
+      <p class="premium-eyebrow">PREMIUM MACHINE</p>
+      <h3>해외 명품 기구로 채운 3F 웨이트존</h3>
+      <p class="p-sub">세계적인 스트렝스 브랜드 기구를 한 곳에서 만나보세요</p>
+      <div class="brand-row">
+      <div class="brand-chip"><img src="brand-hammer.png?v=20261110" alt="HAMMER STRENGTH" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">HAMMER STRENGTH</span></div>
+      <div class="brand-chip"><img src="brand-bootybuilder.png?v=20261110" alt="BOOTY BUILDER" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">BOOTY BUILDER</span></div>
+      <div class="brand-chip"><img src="brand-nautilus.png?v=20261110" alt="NAUTILUS" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">NAUTILUS</span></div>
+      <div class="brand-chip"><img src="brand-panatta.png?v=20261110" alt="PANATTA" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">PANATTA</span></div>
+      <div class="brand-chip"><img src="brand-lifefitness.png?v=20261110" alt="LIFE FITNESS" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">LIFE FITNESS</span></div>
+      </div>
+
+      <div class="premium-divider"></div>
+
+      <h3>국내 명품 DRAX 2F 유산소존</h3>
+      <p class="p-sub">DRAX 런닝머신과 천국의 계단, 마이 마운틴까지 갖췄어요</p>
+      <div class="cardio-logo"><img src="brand-drax.png?v=20261110" alt="DRAX" onerror="this.nextElementSibling.style.display='block';this.remove()"><span class="fb">DRAX</span></div>
+      <div class="stat-row">
+        <div class="stat"><b>8<small>대</small></b><span>런닝머신</span></div>
+        <div class="stat"><b>3<small>대</small></b><span>천국의 계단</span></div>
+        <div class="stat"><b>2<small>대</small></b><span>마이 마운틴</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24시간 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Freedom</p>
+    <h2>24시간이라 가능한 것들</h2>
+    <div class="check-list">
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>출근 전 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>퇴근 후 늦은 시간 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>주말, 명절 새벽 운동</div>
+      <div class="check-item"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>하루 입장 무제한</div>
+    </div>
+  </section>
+
+  <!-- 매니저 · 트레이너 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Team</p>
+    <h2>매니저 · 트레이너 소개</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="team-manager.jpg?v=20261110" alt="최윤창 매니저" loading="lazy">
+        <div class="m-body">
+          <span class="role-tag">MANAGER</span>
+          <p class="m-title">최윤창 매니저</p>
+          <p class="m-quote">“실제로는 친절하게 생겼습니다 ㅎ”</p>
+          <p class="m-msg">항상 친절하고 밝은 인사, 깨끗하고 좋은 청결상태로 맞이하겠습니다</p>
+        </div>
+      </div>
+      <div class="member">
+        <img src="team-strength.jpg?v=20261110" alt="임재민 트레이너" loading="lazy">
+        <div class="m-body">
+          <span class="role-tag">TRAINER</span>
+          <p class="m-title">임재민 트레이너</p>
+          <p class="m-spec">다이어트 · 근육량 전문</p>
+          <p class="m-msg">선수 시절 노하우 그대로, 감량도 근육 만들기도 같이 가봐요</p>
+        </div>
+      </div>
+      <div class="member">
+        <img src="team-posture.jpg?v=20261110" alt="신동환 트레이너" loading="lazy">
+        <div class="m-body">
+          <span class="role-tag">TRAINER</span>
+          <p class="m-title">신동환 트레이너</p>
+          <p class="m-spec">체형교정 전문</p>
+          <p class="m-msg">몸이 불편하신 분, 한 번 무료로 받아보세요. 달라지는 걸 직접 느껴보세요</p>
+        </div>
+      </div>
+      <div class="member">
+        <img src="team-diet.jpg?v=20261110" alt="김현수 트레이너" loading="lazy">
+        <div class="m-body">
+          <span class="role-tag">TRAINER</span>
+          <p class="m-title">김현수 트레이너</p>
+          <p class="m-spec">헬린이 전문</p>
+          <p class="m-msg">‘헬린이 놀이터’의 놀이 담당! 어렵지 않고 재밌게 운동 시작하게 도와드려요</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:0;">
+    <p class="section-label">FAQ</p>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq">
+      <details>
+        <summary>왜 지금은 사전예약만 진행하나요?</summary>
+        <p>시설 공사 일정에 맞춰 결제를 받으려고 해요. 그래서 지금은 결제 없이 예약만 받고, 2월부터 신청 순서대로 순차적으로 연락드려요.</p>
+      </details>
+      <details>
+        <summary>예약하면 꼭 등록해야 하나요?</summary>
+        <p>아니요. 예약은 무료예요. 등록(결제)은 연락을 받으신 뒤에 결정하셔도 돼요.</p>
+      </details>
+      <details>
+        <summary>헬스가 처음인데 괜찮을까요?</summary>
+        <p>네, 그래서 헬린이 놀이터예요. 기구마다 QR코드로 운동 영상을 볼 수 있고, 매주 새로운 위클리 루틴을 안내해드려요. 등록하시면 PT 2회도 드려요.</p>
+      </details>
+      <details>
+        <summary>24시간 언제든 이용할 수 있나요?</summary>
+        <p>네, 24시간 연중무휴로 운영해요. 출근 전, 퇴근 후, 주말 새벽에도 이용하세요.</p>
+      </details>
+      <details>
+        <summary>출입은 어떻게 하나요?</summary>
+        <p>얼굴인식으로 출입해요. 얼굴 등록은 정식 오픈 이후 현장에서 진행하고, 등록하고 나면 24시간 언제든 출입할 수 있어요.</p>
+      </details>
+      <details>
+        <summary>주차는 가능한가요?</summary>
+        <p>주차는 무료로 이용하실 수 있어요. 다만 5대 한정이라, 매교역에서 걸어오시면 더 편해요.</p>
+      </details>
+      <details>
+        <summary>일시정지(홀딩)가 가능한가요?</summary>
+        <p>네, 가능해요. 6개월권은 1회 30일, 12개월권은 2회(총 60일)까지 일시정지할 수 있어요.</p>
+      </details>
+      <details>
+        <summary>친구와 1년권을 동반 등록하면 어떤 혜택이 있나요?</summary>
+        <p>친구와 1년권(12개월)을 동반 등록하시면 두 분 모두 회원권 기간이 1개월 추가돼요.</p>
+      </details>
+      <details>
+        <summary>사전예약 특별혜택은 몇 명까지 받을 수 있나요?</summary>
+        <p>1차(1.1~1.15)와 2차(1.16~1.31) 각각 선착순 30명이고, PT는 선착순 20명이에요.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 위치 -->
+  <section style="padding-top:0;">
+    <p class="section-label">Location</p>
+    <h2>오시는 길</h2>
+    <svg class="map-svg" viewBox="0 0 360 320" role="img" aria-label="웨일짐24 약도: 펠루시드 아파트 오른쪽, 엔마트 건너편, 메가MGC커피 바로 위">
+      <rect width="360" height="320" fill="#E9EEF3"/>
+      <rect x="0" y="134" width="360" height="52" fill="#fff"/>
+      <rect x="170" y="0" width="50" height="320" fill="#fff"/>
+      <path d="M0 160H170M220 160H360M195 0V134M195 186V320" stroke="#CBD5DF" stroke-width="2" stroke-dasharray="8 7" fill="none"/>
+      <rect x="14" y="14" width="142" height="106" rx="14" fill="#D5DEE8"/>
+      <rect x="14" y="200" width="142" height="106" rx="14" fill="#DCE4EC"/>
+      <rect x="234" y="14" width="112" height="106" rx="14" style="fill:#FFE9A8;stroke:var(--navy-800);stroke-width:3"/>
+      <rect x="234" y="200" width="112" height="106" rx="14" fill="#DCE4EC"/>
+      <text x="85" y="72" text-anchor="middle" style="font:800 15px inherit;fill:var(--navy-800)">펠루시드 아파트</text>
+      <circle cx="290" cy="46" r="16" style="fill:var(--sun-400);stroke:var(--navy-800);stroke-width:4"/>
+      <circle cx="290" cy="46" r="5" style="fill:var(--navy-800)"/>
+      <text x="290" y="88" text-anchor="middle" style="font:800 16px inherit;fill:var(--navy-800)">웨일짐24</text>
+      <text x="290" y="107" text-anchor="middle" style="font:800 14px inherit;fill:var(--navy-800)">헬스&amp;PT</text>
+      <circle cx="85" cy="232" r="17" fill="#F26B3A"/>
+      <g transform="translate(74 221) scale(0.92)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></g>
+      <text x="85" y="271" text-anchor="middle" style="font:800 15px inherit;fill:var(--navy-800)">N마트 세류점</text>
+      <text x="85" y="289" text-anchor="middle" style="font:600 12px inherit;fill:#5a6b7d">엔마트</text>
+      <circle cx="290" cy="232" r="17" fill="#8A6F5A"/>
+      <g transform="translate(278 220) scale(1)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></g>
+      <text x="290" y="276" text-anchor="middle" style="font:800 15px inherit;fill:var(--navy-800)">메가MGC커피</text>
+      <text x="88" y="166" text-anchor="middle" style="font:700 13px inherit;fill:#8A99A9">권선로</text>
+      <text transform="translate(200 262) rotate(-90)" text-anchor="middle" style="font:700 13px inherit;fill:#8A99A9">세지로</text>
+      <path d="M156 67H234" stroke="#0C2340" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+      <rect x="165" y="54" width="60" height="26" rx="13" style="fill:var(--navy-800)"/>
+      <text x="195" y="72" text-anchor="middle" style="font:800 13px inherit;fill:#fff">바로 옆</text>
+      <path d="M150 208L242 112" stroke="#0C2340" stroke-width="2.5" stroke-dasharray="6 5" fill="none"/>
+      <rect x="133" y="146" width="124" height="28" rx="14" style="fill:var(--navy-800)"/>
+      <text x="195" y="165" text-anchor="middle" style="font:800 13px inherit;fill:#fff">엔마트 건너편</text>
+    </svg>
+    <div class="map-box">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <p style="font-size:13px;color:var(--navy-800);">경기도 수원시 권선구 세지로 110, 2·3층</p>
+      <p>펠루시드 아파트 바로 옆 · 엔마트 건너편</p>
+      <p>매교역 도보 5분</p>
+    </div>
+    <a href="https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%8B%9C%20%EA%B6%8C%EC%84%A0%EA%B5%AC%20%EC%84%B8%EC%A7%80%EB%A1%9C%20110" target="_blank" rel="noopener" style="display:block;margin-top:10px;text-align:center;font-size:13px;font-weight:700;color:var(--navy-800);background:var(--ivory-dim);border-radius:10px;padding:11px;text-decoration:none;">네이버지도에서 길찾기</a>
+    <a href="tel:01046634040" style="display:block;margin-top:8px;text-align:center;font-size:13px;font-weight:800;color:var(--navy-900);background:var(--sun-400);border-radius:10px;padding:11px;text-decoration:none;">전화 문의 010-4663-4040</a>
+  </section>
+
+  <!-- 신청폼 -->
+  <section class="form-section" id="apply">
+    <p class="section-label" style="color:var(--sun-400);">Reservation</p>
+    <h2>사전예약 신청</h2>
+    <p class="desc">예약은 무료예요. 신청 순서대로 2월부터 순차적으로 연락드려요.</p>
+
+    <form id="reserveForm">
+      <div class="field">
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="성함을 입력해주세요" required>
+      </div>
+      <div class="field">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" inputmode="numeric" maxlength="13" placeholder="010-0000-0000" required>
+      </div>
+      <div class="field">
+        <label>성별</label>
+        <div class="choice-grid" data-group="gender">
+          <button type="button" class="choice">남성</button>
+          <button type="button" class="choice">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>희망 회원권</label>
+        <div class="choice-grid" data-group="plan">
+          <button type="button" class="choice">12개월</button>
+          <button type="button" class="choice">6개월</button>
+          <button type="button" class="choice">3개월</button>
+          <button type="button" class="choice">PT (선착순 20명)</button>
+        </div>
+      </div>
+      <div class="field" id="referralField">
+        <label for="referral">웨일짐24 헬스&PT를 어디서 알게 되셨나요?</label>
+        <select id="referral" required>
+          <option value="" disabled selected>선택해주세요</option>
+          <option>배너</option>
+          <option>현수막</option>
+          <option>전단지</option>
+          <option>당근마켓</option>
+          <option>인스타그램</option>
+          <option>네이버</option>
+          <option>지인소개</option>
+          <option>기타</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">사전예약 신청하기</button>
+    </form>
+
+    <div class="result-msg" id="resultMsg">
+      <p class="r-title">✓ 사전예약이 접수됐어요</p>
+      <ol class="r-steps">
+        <li><span><b>2월부터</b> 신청 순서대로 순차적으로 연락드려요</span></li>
+        <li><span>연락을 받으신 뒤 <b>등록(결제)</b> 여부를 정하세요</span></li>
+        <li><span><b>3월 8일</b> 정식 오픈!</span></li>
+      </ol>
+      <button type="button" class="r-share" onclick="shareFriend()">친구에게 링크 보내기<small>1년권 동반등록하면 둘 다 +1개월</small></button>
+      <a class="r-call" href="tel:01046634040">궁금한 점은 전화 문의 010-4663-4040</a>
+    </div>
+  </section>
+
+  <footer>웨일짐24 헬스&PT · 경기도 수원시 권선구 세지로 110, 2·3층<br>문의 010-4663-4040</footer>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <a class="s-main" href="#apply"><span>사전예약 신청하기</span><small>선착순 30명</small></a>
+    <a class="s-call" href="tel:01046634040" aria-label="전화 문의"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = 'https://arhljhcixqlohlatgniq.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_-Wx2NvdmLvcSEw1XSxgFUg_yDnS40Nc';
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
+<script>
+  // 하단 고정 버튼: 첫 화면 신청 버튼이나 신청폼이 화면에 보이면 숨김
+  (function(){
+    var cta=document.getElementById('stickyCta');
+    var form=document.getElementById('apply');
+    var heroCta=document.querySelector('.hero-cta');
+    if(!cta||!form||!('IntersectionObserver' in window)) return;
+    var hid={form:false,hero:false};
+    function update(){ cta.classList.toggle('hide', hid.form||hid.hero); }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ hid.form=en.isIntersecting; }); update(); },{threshold:0.15}).observe(form);
+    if(heroCta) new IntersectionObserver(function(es){ es.forEach(function(en){ hid.hero=en.isIntersecting; }); update(); },{threshold:0.6}).observe(heroCta);
+  })();
+
+  // 사전예약 마감 카운트다운 (1차 1.15 / 2차 1.31 / 정식 오픈 3.8)
+  (function(){
+    var now = new Date();
+    var start = new Date('2027-01-01T00:00:00+09:00');
+    var d1 = new Date('2027-01-15T23:59:59+09:00');
+    var d2 = new Date('2027-01-31T23:59:59+09:00');
+    var open = new Date('2027-03-08T00:00:00+09:00');
+    function left(t){ return Math.floor((t - now) / 86400000); }
+    var text;
+    if (now < start) { text = '1차 사전예약 시작까지 D-' + Math.max(1, Math.ceil((start - now) / 86400000)); }
+    else if (now <= d1) { var n1 = left(d1); text = n1 <= 0 ? '오늘 1차 사전예약 마감!' : '1차 사전예약 마감까지 D-' + n1; }
+    else if (now <= d2) { var n2 = left(d2); text = n2 <= 0 ? '오늘 2차 사전예약 마감!' : '2차 사전예약 마감까지 D-' + n2; }
+    else { var n3 = Math.ceil((open - now) / 86400000); text = n3 > 0 ? '사전예약 마감 · 정식 오픈 D-' + n3 : '정식 오픈!'; }
+    document.getElementById('ddayText').textContent = text;
+  })();
+
+  // 연락처 입력 시 자동 하이픈
+  document.getElementById('phone').addEventListener('input', function(e){
+    var digits = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
+    var formatted = digits;
+    if (digits.length > 3 && digits.length <= 7) {
+      formatted = digits.slice(0, 3) + '-' + digits.slice(3);
+    } else if (digits.length > 7) {
+      formatted = digits.slice(0, 3) + '-' + digits.slice(3, 7) + '-' + digits.slice(7);
+    }
+    e.target.value = formatted;
+  });
+
+  // 선택형 버튼 토글 (성별 / 희망 회원권)
+  document.querySelectorAll('.choice-grid').forEach(function(group){
+    var multi = group.dataset.multi === 'true';
+    group.querySelectorAll('.choice').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(!multi){
+          group.querySelectorAll('.choice').forEach(function(b){ b.classList.remove('selected'); });
+        }
+        btn.classList.toggle('selected');
+      });
+    });
+  });
+
+  // 유입경로 자동 기록 (주소 끝에 ?src=banner 등이 붙어 있으면 자동 선택)
+  var SRC_MAP = {banner:'배너', placard:'현수막', flyer:'전단지', daangn:'당근마켓', instagram:'인스타그램', naver:'네이버', friend:'지인소개'};
+  function applySrc(){
+    var p = (new URLSearchParams(location.search).get('src') || '').toLowerCase();
+    if (SRC_MAP[p]) {
+      document.getElementById('referral').value = SRC_MAP[p];
+      document.getElementById('referralField').style.display = 'none';
+    }
+  }
+  applySrc();
+
+  // 폼 제출 -------------------------------------------------
+  document.getElementById('reserveForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    var phoneVal = document.getElementById('phone').value;
+    if (!/^010-\d{4}-\d{4}$/.test(phoneVal)) {
+      alert('연락처를 010-0000-0000 형식으로 정확히 입력해주세요.');
+      document.getElementById('phone').focus();
+      return;
+    }
+    var gender = getSelected('gender');
+    if (!gender) { alert('성별을 선택해주세요.'); return; }
+    var plan = getSelected('plan');
+    if (!plan) { alert('희망 회원권을 선택해주세요.'); return; }
+
+    var payload = {
+      name: document.getElementById('name').value.trim(),
+      phone: document.getElementById('phone').value,
+      gender: gender,
+      interest: plan,
+      referral_source: document.getElementById('referral').value
+    };
+
+    var submitBtn = document.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '신청 중...';
+
+    const { error } = await supabaseClient.from('reservations').insert([payload]);
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = '사전예약 신청하기';
+
+    if (error) {
+      console.error('저장 실패:', error);
+      alert('신청 중 문제가 발생했어요. 잠시 후 다시 시도하시거나 010-4663-4040으로 문의해주세요.');
+      return;
+    }
+
+    document.getElementById('reserveForm').style.display = 'none';
+    var rm = document.getElementById('resultMsg');
+    rm.classList.add('show');
+    rm.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  // 친구에게 링크 보내기 (지인소개 경로로 기록)
+  function showToast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2400);
+  }
+  function shareFriend(){
+    var url = location.origin + location.pathname + '?src=friend';
+    var data = { title: '웨일짐24 헬스&PT · 헬린이 놀이터', text: '수원 매교역 24시간 헬스장 사전예약! 1년권 같이 등록하면 둘 다 +1개월', url: url };
+    if (navigator.share) { navigator.share(data).catch(function(){}); }
+    else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function(){ showToast('링크가 복사됐어요. 친구에게 붙여넣어 보내세요'); });
+    } else { window.prompt('아래 링크를 복사해서 친구에게 보내세요', url); }
+  }
+
+  function getSelected(groupName, multi){
+    var group = document.querySelector('.choice-grid[data-group="' + groupName + '"]');
+    var selected = Array.prototype.slice.call(group.querySelectorAll('.choice.selected')).map(function(b){ return b.textContent; });
+    return multi ? selected : (selected[0] || null);
+  }
+</script>
+
+</body>
+</html>
