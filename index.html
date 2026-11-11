@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="웨일짐24 헬스&PT">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="헬스 처음이어도 괜찮아요, 헬린이 놀이터 | 웨일짐24 헬스&PT">
+<meta property="og:title" content="헬스 처음이어도 괜찮아요, 24시간 헬린이 놀이터 | 웨일짐24 헬스&PT">
 <meta property="og:description" content="수원 매교역 도보 5분거리 · 24시간 연중무휴 · 사전예약 특별혜택 (예약은 무료, 등록은 2월부터)">
 <meta property="og:image" content="https://whalegym24.vercel.app/og-image.png?v=20261112">
 <meta property="og:image:width" content="1200">
@@ -87,6 +87,10 @@
   .ti-ic{width:30px;height:30px;flex-shrink:0;stroke:var(--navy-900);margin-top:2px;}
   .ti-big{font-size:clamp(22px,6.3vw,28px);font-weight:800;line-height:1.25;letter-spacing:-0.02em;color:var(--navy-900);margin:0;}
   .ti-big.accent{color:var(--navy-900);}
+  .ti-box{background:var(--navy-900);border-radius:12px;padding:12px 14px;margin-top:12px;}
+  .ti-box .ti-ic{stroke:var(--sun-400);}
+  .ti-box .ti-big.accent{color:var(--sun-400);}
+  .ti-sub{font-size:15px;font-weight:700;color:#fff;line-height:1.4;margin:5px 0 0;letter-spacing:-0.01em;}
   .ti-div{height:2px;background:rgba(8,24,38,0.22);border-radius:2px;margin:12px 0;}
   .hero-cta{display:flex;gap:8px;margin:0 0 22px;}
   .btn-primary{flex:1;display:flex;align-items:center;justify-content:center;background:var(--sun-400);color:var(--navy-900);font-weight:800;font-size:15px;padding:14px 16px;border-radius:14px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);}
@@ -295,14 +299,18 @@
           <p class="ti-big">엔마트 건너편</p>
         </div>
       </div>
-      <div class="ti-div"></div>
-      <div class="ti-row">
-        <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <p class="ti-big accent">24시간 연중무휴 운영</p>
+      <div class="ti-box">
+        <div class="ti-row">
+          <svg class="ti-ic" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div>
+            <p class="ti-big accent">24시간 연중무휴</p>
+            <p class="ti-sub">200평대 · 2·3층<br>웨이트·유산소 분리형</p>
+          </div>
+        </div>
       </div>
     </div>
     <span class="eyebrow">웨일짐24 헬스&PT · 수원 매교역 신규 오픈</span>
-    <h1>헬스 처음이어도 괜찮아요<br><span>헬린이 놀이터</span></h1>
+    <h1>헬스 처음이어도 괜찮아요<br><span>24시간 헬린이 놀이터</span></h1>
     <p class="sub">1월 사전예약(무료) → 2월 등록(결제) → 3월 8일 정식 오픈</p>
     <div class="dday" id="ddayBox">
       <span id="ddayText">D-DAY 계산 중...</span>
@@ -310,9 +318,6 @@
     <div class="hero-cta">
       <a class="btn-primary" href="#apply">사전예약 신청하기</a>
       <a class="btn-call" href="tel:01046634040"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>전화 문의</a>
-    </div>
-    <div class="tags">
-      <span class="tag">200평대 2·3층 웨이트·유산소 분리형</span>
     </div>
     <div class="whale-scene" style="display:flex;align-items:center;justify-content:center;">
       <img src="logo.png?v=20261112" alt="웨일짐24 헬스&PT 로고" style="width:min(300px,84vw);height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 10px 28px rgba(79,179,232,0.28));">
