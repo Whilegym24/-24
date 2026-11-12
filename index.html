@@ -242,6 +242,25 @@
   .r-call{display:block;text-align:center;font-size:12px;color:var(--sky-300);text-decoration:none;font-weight:600;}
   .price-row .pv{text-align:right;}
   .price-row .pv small{display:block;font-size:10px;font-weight:600;opacity:.7;margin-top:1px;}
+  /* 가격표 시인성: 글씨·숫자 크게 */
+  .price-card{padding:18px 14px 16px;}
+  .price-head p{font-size:17px;}
+  .price-badge{font-size:11px;padding:3px 9px;}
+  .price-card .period{font-size:13px;font-weight:700;opacity:.8;margin:2px 0 8px;}
+  .price-row{font-size:15px;font-weight:700;align-items:baseline;padding:9px 0;}
+  .price-row span:last-child{font-size:24px;font-weight:900;letter-spacing:-0.02em;}
+  .price-row.main{flex-direction:column;align-items:flex-start;padding:10px 0 12px;}
+  .price-row.main span:first-child{font-size:15px;}
+  .price-row.main span:last-child{font-size:36px;line-height:1.1;}
+  .price-row.main .pv{text-align:left;}
+  .price-row .pv small{font-size:13px;font-weight:700;opacity:.8;margin-top:3px;letter-spacing:0;}
+  .price-perk{font-size:15px;}
+  .price-perk small{font-size:11.5px;}
+  .price-perk small.strong{font-size:14.5px;}
+  .pt-card p.t{font-size:17px;}
+  .pt-card p.d{font-size:12.5px;}
+  .pt-card p.price{font-size:21px;white-space:nowrap;text-align:right;flex-shrink:0;margin-left:10px;}
+
   .share-btn{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:var(--navy-800);color:var(--sun-400);border:none;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;cursor:pointer;font-family:inherit;}
   .share-btn svg{width:14px;height:14px;stroke:var(--sun-400);flex-shrink:0;}
   .toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(20px);background:rgba(8,24,38,.94);color:#fff;font-size:13px;font-weight:700;padding:11px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:80;max-width:86%;text-align:center;}
@@ -348,7 +367,7 @@
       <div class="price-card primary">
         <div class="price-head"><p>1차 사전예약</p><span class="price-badge">선착순 30명</span></div>
         <p class="period">1.1 ~ 1.15</p>
-        <div class="price-row"><span>12개월</span><span class="pv">33만원<small>월 27,500원</small></span></div>
+        <div class="price-row main"><span>12개월</span><span class="pv">33만원<small>월 27,500원</small></span></div>
         <div class="price-row"><span>6개월</span><span>23만원</span></div>
         <div class="price-row"><span>3개월</span><span>13만원</span></div>
         <div class="price-perk">운동복 + 수건 무료<small class="strong">13.2만원 상당<br>추가 무료혜택</small><small>월 11,000원 × 12개월 기준</small></div>
@@ -356,10 +375,10 @@
       <div class="price-card secondary">
         <div class="price-head"><p>2차 사전예약</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
         <p class="period">1.16 ~ 1.31</p>
-        <div class="price-row"><span>12개월</span><span class="pv">35만원<small>월 약 29,200원</small></span></div>
+        <div class="price-row main"><span>12개월</span><span class="pv">35만원<small>월 약 29,200원</small></span></div>
         <div class="price-row"><span>6개월</span><span>25만원</span></div>
         <div class="price-row"><span>3개월</span><span>15만원</span></div>
-        <div class="price-perk">운동복 + 수건 무료<small class="strong">13.2만원 상당<br>추가 무료혜택</small><small>월 11,000원 × 12개월 기준</small></div>
+        <div class="price-perk">수건 무료<small class="strong">6.6만원 상당<br>추가 무료혜택</small><small>월 5,500원 × 12개월 기준</small></div>
       </div>
     </div>
     <div class="pt-card">
@@ -384,9 +403,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div>
-          <p class="benefit-t">친구랑 1년권 동반등록 시 +1개월 추가</p>
+          <p class="benefit-t">지인과 1년권 동반등록 시 +1개월 추가</p>
           <p class="benefit-d">1년권(12개월)을 같이 등록하면 둘 다 한 달 더 늘어나요</p>
-          <button type="button" class="share-btn" onclick="shareFriend()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>친구에게 링크 보내기</button>
+          <button type="button" class="share-btn" onclick="shareFriend()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>지인에게 링크 보내기</button>
         </div>
       </div>
       <div class="benefit-item">
@@ -577,8 +596,8 @@
         <p>네, 가능해요. 6개월권은 1회 30일, 12개월권은 2회(총 60일)까지 일시정지할 수 있어요.</p>
       </details>
       <details>
-        <summary>친구와 1년권을 동반 등록하면 어떤 혜택이 있나요?</summary>
-        <p>친구와 1년권(12개월)을 동반 등록하시면 두 분 모두 회원권 기간이 1개월 추가돼요.</p>
+        <summary>지인과 1년권을 동반 등록하면 어떤 혜택이 있나요?</summary>
+        <p>지인과 1년권(12개월)을 동반 등록하시면 두 분 모두 회원권 기간이 1개월 추가돼요.</p>
       </details>
       <details>
         <summary>사전예약 특별혜택은 몇 명까지 받을 수 있나요?</summary>
@@ -687,7 +706,7 @@
         <li><span>연락을 받으신 뒤 <b>등록(결제)</b> 여부를 정하세요</span></li>
         <li><span><b>3월 8일</b> 정식 오픈!</span></li>
       </ol>
-      <button type="button" class="r-share" onclick="shareFriend()">친구에게 링크 보내기<small>1년권 동반등록하면 둘 다 +1개월</small></button>
+      <button type="button" class="r-share" onclick="shareFriend()">지인에게 링크 보내기<small>1년권 동반등록하면 둘 다 +1개월</small></button>
       <a class="r-call" href="tel:01046634040">궁금한 점은 전화 문의 010-4663-4040</a>
     </div>
   </section>
@@ -819,7 +838,7 @@
     rm.scrollIntoView({behavior:'smooth', block:'center'});
   });
 
-  // 친구에게 링크 보내기 (지인소개 경로로 기록)
+  // 지인에게 링크 보내기 (지인소개 경로로 기록)
   function showToast(msg){
     var t = document.getElementById('toast');
     t.textContent = msg; t.classList.add('show');
@@ -830,8 +849,8 @@
     var data = { title: '웨일짐24 헬스&PT · 헬린이 놀이터', text: '수원 매교역 24시간 헬스장 사전예약! 1년권 같이 등록하면 둘 다 +1개월', url: url };
     if (navigator.share) { navigator.share(data).catch(function(){}); }
     else if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(function(){ showToast('링크가 복사됐어요. 친구에게 붙여넣어 보내세요'); });
-    } else { window.prompt('아래 링크를 복사해서 친구에게 보내세요', url); }
+      navigator.clipboard.writeText(url).then(function(){ showToast('링크가 복사됐어요. 지인에게 붙여넣어 보내세요'); });
+    } else { window.prompt('아래 링크를 복사해서 지인에게 보내세요', url); }
   }
 
   function getSelected(groupName, multi){
