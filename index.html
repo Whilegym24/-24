@@ -337,7 +337,7 @@
     </div>
     <span class="eyebrow">웨일짐24 헬스&PT · 수원 매교역 신규 오픈</span>
     <h1>헬스 처음이어도 괜찮아요<br><span>24시간 헬린이 놀이터</span></h1>
-    <p class="sub">1월 사전예약(무료) → 2월 등록(결제) → 3월 1일 정식 오픈</p>
+    <p class="sub">사전예약(무료) ~1월 31일 → 2월 등록(결제) → 3월 1일 정식 오픈</p>
     <div class="cd" id="countdown">
       <div class="cd-item" id="cd1"><small class="cd-t">1차 사전예약</small><b class="cd-v">-</b><small class="cd-s"></small></div>
       <div class="cd-item" id="cd2"><small class="cd-t">2차 사전예약</small><b class="cd-v">-</b><small class="cd-s"></small></div>
@@ -358,7 +358,7 @@
   <!-- BANNER -->
   <div class="banner" style="margin-top:-4px;">
     <p class="big">예약은 무료! 등록(결제)은 2월부터</p>
-    <p class="small">사전예약 특별혜택 1.1 ~ 1.31 · 선착순 30명 한정</p>
+    <p class="small">사전예약 특별혜택 ~1월 31일 · 선착순 30명 한정</p>
   </div>
 
   <!-- 가격 -->
@@ -375,7 +375,7 @@
     <div class="price-grid">
       <div class="price-card primary">
         <div class="price-head"><p>1차 사전예약</p><span class="price-badge">선착순 30명</span></div>
-        <p class="period">1.1 ~ 1.15</p>
+        <p class="period">~1월 15일</p>
         <div class="price-row main"><span>12개월</span><span class="pv">33만원<small>월 27,500원</small></span></div>
         <div class="price-row"><span>6개월</span><span>23만원</span></div>
         <div class="price-row"><span>3개월</span><span>13만원</span></div>
@@ -383,7 +383,7 @@
       </div>
       <div class="price-card secondary">
         <div class="price-head"><p>2차 사전예약</p><span class="price-badge" style="background:var(--ivory-dim);">선착순 30명</span></div>
-        <p class="period">1.16 ~ 1.31</p>
+        <p class="period">1월 16일 ~ 31일</p>
         <div class="price-row main"><span>12개월</span><span class="pv">35만원<small>월 약 29,200원</small></span></div>
         <div class="price-row"><span>6개월</span><span>25만원</span></div>
         <div class="price-row"><span>3개월</span><span>15만원</span></div>
@@ -610,7 +610,7 @@
       </details>
       <details>
         <summary>사전예약 특별혜택은 몇 명까지 받을 수 있나요?</summary>
-        <p>1차(1.1~1.15)와 2차(1.16~1.31) 각각 선착순 30명이고, PT는 선착순 20명이에요.</p>
+        <p>1차(~1월 15일)와 2차(1월 16일~31일) 각각 선착순 30명이고, PT는 선착순 20명이에요.</p>
       </details>
     </div>
   </section>
@@ -752,13 +752,13 @@
   })();
 
   // 사전예약 카운트다운 (한국 날짜 기준, 날짜가 지나면 자동으로 바뀜)
-  // 1차 1.1~1.15 / 2차 1.16~1.31 / 정식 오픈 3.1
+  // 1차 ~1.15 (12월에 먼저 시작할 수 있음) / 2차 1.16~1.31 / 정식 오픈 3.1
   (function(){
     function kstDay(d){ var t = new Date(d.getTime() + 9*3600*1000); return Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()); }
     var DAY = 86400000, today = kstDay(new Date());
     var P = [
-      {id:'cd1', name:'1차 사전예약', start:Date.UTC(2027,0,1),  end:Date.UTC(2027,0,15), s:'1.1',  e:'1.15', early:true},
-      {id:'cd2', name:'2차 사전예약', start:Date.UTC(2027,0,16), end:Date.UTC(2027,0,31), s:'1.16', e:'1.31'}
+      {id:'cd1', name:'1차 사전예약', start:Date.UTC(2027,0,1),  end:Date.UTC(2027,0,15), s:'1월 1일',  e:'1월 15일', early:true},
+      {id:'cd2', name:'2차 사전예약', start:Date.UTC(2027,0,16), end:Date.UTC(2027,0,31), s:'1월 16일', e:'1월 31일'}
     ];
     var highlighted = false, allDone = true;
     P.forEach(function(p){
